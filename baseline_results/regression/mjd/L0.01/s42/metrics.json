@@ -1,0 +1,386 @@
+{
+  "dataset": "mjd",
+  "n_events": 390000,
+  "n_nonfinite": 0,
+  "lines": {
+    "Pb212_238": {
+      "line_keV": 238.632,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 238.84652902365505,
+      "fwhm_raw_keV": 1.5401383767637356,
+      "fwhm_raw_err_keV": 0.018786961743431245,
+      "signal": 32043.925938127253,
+      "chi2_ndf": 1.5185167900231307,
+      "window_keV": [
+        232.84470621741286,
+        244.84470621741286
+      ],
+      "n_bins": 73,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [
+        240.986
+      ],
+      "params": {
+        "N": 32043.925938127253,
+        "mu": 238.84652902365505,
+        "sig": 0.5158667705742783,
+        "f_tail": 0.4499999960528505,
+        "tau": 0.33107920015445375,
+        "f_high": 0.38354097663710096,
+        "tau_high": 0.8024430658235456,
+        "h_step": 733.371056095115,
+        "b0": 695.0294628809136,
+        "b1": 8.912443117821969,
+        "A0": 4181.746281021443
+      },
+      "sideband_width_keV": 5.232292395382573,
+      "sidebands": {
+        "low": 7276,
+        "high": 4775
+      },
+      "residual_fwhm_keV": 1.568601447150866,
+      "local_gain": 1.0030970001929367,
+      "fwhm_keV": 1.5353832944047323,
+      "fwhm_err_keV": 0.01872895815640735,
+      "fwhm_rel": 0.006434104790659812,
+      "role": "curve"
+    },
+    "Tl208_583": {
+      "line_keV": 583.191,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 584.8049301397506,
+      "fwhm_raw_keV": 2.8516697256405905,
+      "fwhm_raw_err_keV": 0.04237287566121353,
+      "signal": 17791.995828767384,
+      "chi2_ndf": 2.0973115296347893,
+      "window_keV": [
+        575.0887845167609,
+        594.6629417921462
+      ],
+      "n_bins": 64,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 17791.995828767384,
+        "mu": 584.8049301397506,
+        "sig": 1.030025400895476,
+        "f_tail": 0.44999999999999696,
+        "tau": 1.0571119825915554,
+        "f_high": 0.1464569886283951,
+        "tau_high": 2.973923004452739,
+        "h_step": 5.103467429580954e-09,
+        "b0": 94.09666338492677,
+        "b1": -5.304927313604639
+      },
+      "sideband_width_keV": 9.687941060831632,
+      "sidebands": {
+        "low": 1574,
+        "high": 934
+      },
+      "residual_fwhm_keV": 2.7675036490034337,
+      "local_gain": 1.0023306504830556,
+      "fwhm_keV": 2.8450389342741125,
+      "fwhm_err_keV": 0.04227434892946023,
+      "fwhm_rel": 0.004878399931195976,
+      "role": "curve"
+    },
+    "Bi212_727": {
+      "line_keV": 727.33,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 729.6583190376606,
+      "fwhm_raw_keV": 3.2833777276458704,
+      "fwhm_raw_err_keV": 0.10400407337858261,
+      "signal": 3985.750147509196,
+      "chi2_ndf": 1.5717651942966124,
+      "window_keV": [
+        718.180748130021,
+        741.0278657983548
+      ],
+      "n_bins": 64,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 3985.750147509196,
+        "mu": 729.6583190376606,
+        "sig": 1.177071538001725,
+        "f_tail": 0.44999999999983487,
+        "tau": 1.2390950127166,
+        "f_high": 0.16532843438052422,
+        "tau_high": 4.2436702918609175,
+        "h_step": 62.97226842891561,
+        "b0": 29.532775847932754,
+        "b1": 2.0132072900506413
+      },
+      "sideband_width_keV": 11.154577130679103,
+      "sidebands": {
+        "low": 840,
+        "high": 692
+      },
+      "residual_fwhm_keV": 3.2768103991590425,
+      "local_gain": 1.0118701881835972,
+      "fwhm_keV": 3.2448606214398352,
+      "fwhm_err_keV": 0.10278400786298465,
+      "fwhm_rel": 0.004461332024582838,
+      "role": "curve"
+    },
+    "Tl208_861": {
+      "line_keV": 860.564,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 863.3546330330249,
+      "fwhm_raw_keV": 4.0117910806903865,
+      "fwhm_raw_err_keV": 0.2336312698925541,
+      "signal": 2473.6726192100728,
+      "chi2_ndf": 1.1388500241524329,
+      "window_keV": [
+        849.4794007773024,
+        877.7766322982819
+      ],
+      "n_bins": 64,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 2473.6726192100728,
+        "mu": 863.3546330330249,
+        "sig": 1.4268661549426933,
+        "f_tail": 0.44999999999999996,
+        "tau": 1.5306968127209926,
+        "f_high": 0.18209129211017513,
+        "tau_high": 5.586639525590651,
+        "h_step": 24.19567008342702,
+        "b0": 23.006301010862835,
+        "b1": 0.5146117754192785
+      },
+      "sideband_width_keV": 13.629206492125507,
+      "sidebands": {
+        "low": 624,
+        "high": 515
+      },
+      "residual_fwhm_keV": 4.100850570693734,
+      "local_gain": 1.0117215366205379,
+      "fwhm_keV": 3.9653115363057374,
+      "fwhm_err_keV": 0.23092448014199107,
+      "fwhm_rel": 0.004607805504652457,
+      "role": "curve"
+    },
+    "Tl208_DEP_1593": {
+      "line_keV": 1592.53,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 1601.3563341619972,
+      "fwhm_raw_keV": 4.787060494756588,
+      "fwhm_raw_err_keV": 12.918633254990194,
+      "signal": 877.8114937527376,
+      "chi2_ndf": 1.0310163213530954,
+      "window_keV": [
+        1584.6927150078166,
+        1618.0915451298022
+      ],
+      "n_bins": 64,
+      "iterations": 3,
+      "converged": true,
+      "neighbours_keV": [
+        1620.5
+      ],
+      "params": {
+        "N": 877.8114937527376,
+        "mu": 1601.3563341619972,
+        "sig": 1.3989578388124195,
+        "f_tail": 0.44999999937910634,
+        "tau": 3.045398112467017,
+        "f_high": 0.38200858845029867,
+        "tau_high": 20.8752675873967,
+        "h_step": 36.567981579416376,
+        "b0": 12.768074653052695,
+        "b1": 1.2279452366581058,
+        "A0": 9.631595479807778e-11
+      },
+      "sideband_width_keV": 16.26301934997728,
+      "sidebands": {
+        "low": 477,
+        "high": 566
+      },
+      "residual_fwhm_keV": 5.785642242044968,
+      "local_gain": 0.996639718079445,
+      "fwhm_keV": 4.803200602903323,
+      "fwhm_err_keV": 12.962189867251922,
+      "fwhm_rel": 0.003016081708290157,
+      "role": "curve"
+    },
+    "Bi212_1621": {
+      "line_keV": 1620.5,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 1628.0872279044522,
+      "fwhm_raw_keV": 6.955285324904935,
+      "fwhm_raw_err_keV": 6.225680073321366,
+      "signal": 1155.8981511521663,
+      "chi2_ndf": 1.2014351282376108,
+      "window_keV": [
+        1603.3238749696689,
+        1652.517475426885
+      ],
+      "n_bins": 64,
+      "iterations": 4,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 1155.8981511521663,
+        "mu": 1628.0872279044522,
+        "sig": 1.9395664138614572,
+        "f_tail": 0.449999999987813,
+        "tau": 5.0711355236577145,
+        "f_high": 0.39262545355339135,
+        "tau_high": 30.747000268992473,
+        "h_step": 4.2133805977952165e-08,
+        "b0": 26.665702494436474,
+        "b1": -0.29481640916959256
+      },
+      "sideband_width_keV": 23.629101814660395,
+      "sidebands": {
+        "low": 1428,
+        "high": 791
+      },
+      "residual_fwhm_keV": 7.288324866481024,
+      "local_gain": 0.9620324088554211,
+      "fwhm_keV": 7.229782760832342,
+      "fwhm_err_keV": 6.471382893148449,
+      "fwhm_rel": 0.004461451873392374,
+      "role": "curve"
+    },
+    "Tl208_SEP_2104": {
+      "line_keV": 2103.53,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 2113.6316338303045,
+      "fwhm_raw_keV": 9.697124949540466,
+      "fwhm_raw_err_keV": 5.157896420264726,
+      "signal": 2058.4331795343514,
+      "chi2_ndf": 0.8019502735142834,
+      "window_keV": [
+        2080.391844705593,
+        2145.30650419997
+      ],
+      "n_bins": 64,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 2058.4331795343514,
+        "mu": 2113.6316338303045,
+        "sig": 3.020929855515648,
+        "f_tail": 0.44999999997543405,
+        "tau": 3.9270513153758593,
+        "f_high": 0.4461617801938591,
+        "tau_high": 40.5726621829245,
+        "h_step": 26.743028865107167,
+        "b0": 20.192186956551446,
+        "b1": 0.41418677910072677
+      },
+      "sideband_width_keV": 32.943918479046296,
+      "sidebands": {
+        "low": 1226,
+        "high": 1378
+      },
+      "residual_fwhm_keV": 9.749154007387439,
+      "local_gain": 1.015564655189442,
+      "fwhm_keV": 9.548505749967813,
+      "fwhm_err_keV": 5.0788459345334145,
+      "fwhm_rel": 0.004539277191182352,
+      "role": "secondary"
+    },
+    "Tl208_2615": {
+      "line_keV": 2614.511,
+      "reportable": false,
+      "reasons": [
+        "chi2/ndf 6.58 >= 3.0"
+      ],
+      "centroid_keV": 2626.8982646896247,
+      "fwhm_raw_keV": 11.193843814947286,
+      "fwhm_raw_err_keV": 0.23793064570329772,
+      "signal": 15136.527706880282,
+      "chi2_ndf": 6.579223108320095,
+      "window_keV": [
+        2589.0012336450695,
+        2664.8146515537915
+      ],
+      "n_bins": 64,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 15136.527706880282,
+        "mu": 2626.8982646896247,
+        "sig": 3.6479788561558175,
+        "f_tail": 0.44999999999999996,
+        "tau": 4.861766242657798,
+        "f_high": 0.36306940888888584,
+        "tau_high": 47.384386192950984,
+        "h_step": 105.72120046355029,
+        "b0": -77.77652675619719,
+        "b1": 0.6422327702661179
+      },
+      "sideband_width_keV": 38.02870232421574,
+      "sidebands": {
+        "far_low": 316,
+        "low": 249
+      },
+      "residual_fwhm_keV": 12.128641774593046,
+      "local_gain": 1.000589840665332,
+      "fwhm_keV": 11.187245122840798,
+      "fwhm_err_keV": 0.23779038726306492,
+      "fwhm_rel": 0.004278905356619574,
+      "role": "curve"
+    }
+  },
+  "relative_residual_sigma": 0.0029796236357618926,
+  "headline": {
+    "name": "FWHM at Q_bb 2039 keV (keV)",
+    "value": 7.811218232253456,
+    "err": 1.3592075971306923,
+    "curve": {
+      "a": 4.630577780516334e-13,
+      "b": 0.007232585535058997,
+      "c": 1.1127961008786402e-05,
+      "fwhm_keV": 7.811218232253456,
+      "fwhm_err_keV": 1.3592075971306923,
+      "chi2_ndf": 0.4559589353011882,
+      "lines_keV": [
+        238.632,
+        583.191,
+        727.33,
+        860.564,
+        1592.53,
+        1620.5
+      ]
+    },
+    "reportable": true
+  },
+  "secondary": {
+    "fwhm_dep_1593_keV": 4.803200602903323,
+    "fwhm_dep_1593_err_keV": 12.962189867251922,
+    "fwhm_sep_2104_keV": 9.548505749967813,
+    "fwhm_sep_2104_err_keV": 5.0788459345334145,
+    "fwhm_2615_keV": null,
+    "fwhm_2615_err_keV": null
+  },
+  "benchmark": "nldbd-energy-resolution 1.0.0-dev",
+  "split": "test",
+  "model": "paper_region_mlp__scratch",
+  "predictions": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/mjd/L0.01/s42/predictions.npz",
+  "predictions_sha256": "9383860101fac4163477270992fe9cdb4c7f5ef46fa04a06afef1fa4e43e4422",
+  "integrity": {
+    "ids_match_split": true,
+    "training_ids": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/mjd/L0.01/s42/training_ids.npz",
+    "n_training_ids": 29360,
+    "overlap_with_split": 0
+  },
+  "evaluated_utc": "2026-10-25T17:57:10+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "version": "1.2.1",
+  "description": "Frozen fine-tuning protocol: how a pretrained encoder is turned into a classifier per dataset and label regime.",
+  "modes": {
+    "probe": "encoder frozen (evaluated in eval mode, embeddings computed once and cached); only the head trains (representation quality)",
+    "full": "encoder and head train (lower learning rate for the encoder)",
+    "scratch": "same encoder architecture with random weights, same recipe (the control every pretrained run is compared with)"
+  },
+  "head": "masked mean pooling over tokens (or the event embedding as is) -> LayerNorm(D) -> Linear(D, 64) -> GELU -> Linear(64, 1); fresh initialisation per run",
+  "loss": "binary cross-entropy with logits, no class weights, no augmentation",
+  "optimizer": {"name": "AdamW", "lr_head": 5e-4, "lr_encoder_full": 1e-4, "lr_encoder_scratch": 5e-4, "weight_decay": 1e-4,
+                "betas": [0.9, 0.999], "gradient_clip_norm": 1.0},
+  "schedule": {"warmup_fraction": 0.05, "decay": "cosine to zero over the planned steps"},
+  "batch_size": 64,
+  "precision": "fp32",
+  "epochs_max": 50,
+  "min_steps": 3000,
+  "min_steps_note": "small label sets are cycled so that early stopping is armed only after min_steps optimizer steps (MJD sits at chance level for thousands of steps)",
+  "early_stopping": {"metric": "inclusive AUC on the frozen coarse subset (cached inputs)", "patience": 5, "min_delta": 0.0},
+  "selection": "the epoch with the best coarse-subset AUC; its weights score the coarse subset and then the test split once",
+  "validation_inputs": "the frozen coarse subset of the validation split (manifests/<ds>.json[coarse]); its labels are used for selection only, never for gradients",
+  "label_regimes": [0.01, 0.1, 1.0],
+  "seeds": {"default": 42, "extra_at_0.1": [43, 44]},
+  "data_loading": "inputs stream through the official reader each epoch in file order and are shuffled inside a buffer of 8192 events",
+  "wall_clock_cap_hours_default": 2.0
+}

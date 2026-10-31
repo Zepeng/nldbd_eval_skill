@@ -1,0 +1,39 @@
+{
+  "dataset": "supernemo",
+  "n_events": 786432,
+  "n_nonfinite": 0,
+  "lines": {},
+  "relative_residual_sigma": 1.0834643323727102,
+  "headline": {
+    "name": "0nubb residual FWHM (keV)",
+    "value": 351.64060059465095,
+    "err": 1.0507447175992155,
+    "bias_keV": 0.7645263671875,
+    "relative_to_q_bb": 0.11729564047988623,
+    "trivial_floor_keV": 380.7656989398679,
+    "reportable": true,
+    "n_events": 196608
+  },
+  "secondary": {
+    "predicted_0nubb_halfmax_fwhm_keV": 140.96113325757415,
+    "reference_0nubb_halfmax_fwhm_keV": 287.66077596283003,
+    "pearson_r_all": -0.0567663587277895,
+    "by_source_residual_fwhm_keV": {
+      "0nubb": 351.64060059465095,
+      "2nubb": 1018.0487624390865,
+      "Bi214": 1522.2108631930084
+    }
+  },
+  "benchmark": "nldbd-energy-resolution 1.0.0-dev",
+  "split": "test",
+  "model": "paper_region_mlp__scratch",
+  "predictions": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/supernemo/L0.01/s42/predictions.npz",
+  "predictions_sha256": "a28b36abb68b6f7a4d70921a25fb55e9ebdc0f12e16fc48b56eb6d7b912d5136",
+  "integrity": {
+    "ids_match_split": true,
+    "training_ids": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/supernemo/L0.01/s42/training_ids.npz",
+    "n_training_ids": 35906,
+    "overlap_with_split": 0
+  },
+  "evaluated_utc": "2026-10-25T17:57:13+00:00"
+}

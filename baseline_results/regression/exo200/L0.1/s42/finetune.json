@@ -1,0 +1,281 @@
+{
+  "recipe_version": "1.0.0-dev",
+  "recipe": {
+    "version": "1.0.0-dev",
+    "description": "Frozen regression protocol: how a pretrained encoder is turned into an energy regressor per dataset and label regime.",
+    "modes": {
+      "probe": "encoder frozen (eval mode, embeddings computed once and cached); only the regression head trains",
+      "full": "encoder and head train (lower learning rate for the encoder)",
+      "scratch": "same encoder architecture with random weights, same recipe (the control)"
+    },
+    "head": "pooled embedding (masked mean over tokens, or the event embedding) -> LayerNorm(D); log E = c[detector] + a * log_scale + MLP([LayerNorm(emb), standardised log_scale, detector embedding(8)]); MLP = Linear(D + 9, 128) -> GELU -> Linear(128, 1) with a zero-initialised last layer; c and a are trainable and start at the least-squares calibration of log E on log_scale (per detector for MJD) over the labeled events, so training starts from the amplitude calibration",
+    "target": "log of the reference energy (keV); training events with reference energy <= 1 keV are skipped (log undefined); predictions are exp(log E)",
+    "loss": "Huber(delta = 1) on (log E_pred - log E_ref) / 0.01 (1 % relative error = 1 unit)",
+    "optimizer": {
+      "name": "AdamW",
+      "lr_head": 0.001,
+      "lr_encoder_full": 0.0001,
+      "lr_encoder_scratch": 0.0005,
+      "weight_decay": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "gradient_clip_norm": 1.0
+    },
+    "schedule": {
+      "warmup_fraction": 0.05,
+      "decay": "cosine to zero over the planned steps"
+    },
+    "batch_size": 128,
+    "precision": "fp32",
+    "epochs_max": 30,
+    "min_steps": 3000,
+    "early_stopping": {
+      "metric": "mean loss on the selection subset",
+      "patience": 4,
+      "min_delta": 0.0
+    },
+    "selection_subset": {
+      "split": "validation",
+      "events": {
+        "mjd": 20000,
+        "exo200": 6000,
+        "supernemo": 20000
+      },
+      "seed": 7,
+      "note": "positions = sorted first N of default_rng(seed).permutation(n_validation); energies used for selection only, never for gradients"
+    },
+    "label_regimes": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "seeds": {
+      "default": 42
+    },
+    "data_loading": "labeled inputs held in memory when they fit NLDBD_FINETUNE_RAM_GB (default 8), else streamed through the regression view each pass in file order and shuffled inside a buffer of 8192 events",
+    "wall_clock_cap_hours_default": 3.0
+  },
+  "benchmark": "nldbd-energy-resolution 1.0.0-dev",
+  "mode": "scratch",
+  "name": "paper_region_mlp",
+  "fm_module": "research/paper_baseline/region_mlp_encoder.py",
+  "fm_module_sha256": "c48073c22026d2af04ed22f5adb2a5ff26e55b0dfd3d1a148a45a29995b36173",
+  "fm_info": {
+    "paper_model": "Region + MLP Transformer",
+    "arch": {
+      "d_model": 64,
+      "nhead": 4,
+      "num_layers": 2,
+      "dim_feedforward": 256,
+      "dropout": 0.1,
+      "num_frequencies": 6
+    },
+    "next_tokenization": {
+      "tokenization": "voxel",
+      "max_tokens": 512,
+      "voxel_size": 15.0,
+      "coordinate_scale": 1000.0,
+      "center_coordinates": true,
+      "voxel_truncation": "occupancy",
+      "summary_morton_bits": 10,
+      "seed": 42
+    },
+    "supernemo_tokenization": {
+      "tokenization": "voxel",
+      "max_tokens": 128,
+      "coordinate_scale_mm": 1000.0,
+      "center_coordinates": true,
+      "voxel_size_mm": 60.0,
+      "summary_morton_bits": 10,
+      "tracker_radius_scale_mm": 24.0,
+      "seed": 42,
+      "sampling_key": "local_event_number"
+    },
+    "amp": {
+      "next": true,
+      "supernemo": true
+    },
+    "patience": {
+      "supernemo": 12
+    },
+    "selection": {
+      "supernemo": "matched_auc"
+    }
+  },
+  "embed_dim": 64,
+  "parameters": 128395,
+  "trainable_parameters": 128395,
+  "dataset": "exo200",
+  "label_fraction": 0.1,
+  "seed": 42,
+  "labeled_events": 33663,
+  "selection_events": 6000,
+  "calibration_start": {
+    "a": 0.6854064729151895,
+    "c": [
+      3.681416232323345
+    ]
+  },
+  "n_pretraining_ids": 0,
+  "history": [
+    {
+      "epoch": 1,
+      "steps": 789,
+      "train_loss": 18.768002127728508,
+      "selection_loss": 11.948619842529297,
+      "selection_rel_sigma": 0.12101029604673386,
+      "seconds": 67.3
+    },
+    {
+      "epoch": 2,
+      "steps": 1578,
+      "train_loss": 10.583351272626295,
+      "selection_loss": 8.488154411315918,
+      "selection_rel_sigma": 0.09326954931020737,
+      "seconds": 77.0
+    },
+    {
+      "epoch": 3,
+      "steps": 2367,
+      "train_loss": 9.026699568439648,
+      "selection_loss": 7.353727340698242,
+      "selection_rel_sigma": 0.07827988266944885,
+      "seconds": 85.8
+    },
+    {
+      "epoch": 4,
+      "steps": 3156,
+      "train_loss": 8.142608176676365,
+      "selection_loss": 8.756778717041016,
+      "selection_rel_sigma": 0.07097875326871872,
+      "seconds": 87.0
+    },
+    {
+      "epoch": 5,
+      "steps": 3945,
+      "train_loss": 7.651575461447137,
+      "selection_loss": 8.559881210327148,
+      "selection_rel_sigma": 0.06906678527593613,
+      "seconds": 71.4
+    },
+    {
+      "epoch": 6,
+      "steps": 4734,
+      "train_loss": 7.222658242055468,
+      "selection_loss": 8.244693756103516,
+      "selection_rel_sigma": 0.06670377403497696,
+      "seconds": 89.6
+    },
+    {
+      "epoch": 7,
+      "steps": 5523,
+      "train_loss": 6.921289058086179,
+      "selection_loss": 6.8181633949279785,
+      "selection_rel_sigma": 0.06191164255142212,
+      "seconds": 89.8
+    },
+    {
+      "epoch": 8,
+      "steps": 6312,
+      "train_loss": 6.645508758676297,
+      "selection_loss": 7.3255109786987305,
+      "selection_rel_sigma": 0.05633196607232094,
+      "seconds": 71.6
+    },
+    {
+      "epoch": 9,
+      "steps": 7101,
+      "train_loss": 6.411367884989116,
+      "selection_loss": 6.965038776397705,
+      "selection_rel_sigma": 0.059086985886096954,
+      "seconds": 70.3
+    },
+    {
+      "epoch": 10,
+      "steps": 7890,
+      "train_loss": 6.21011080242943,
+      "selection_loss": 6.235029697418213,
+      "selection_rel_sigma": 0.06041394919157028,
+      "seconds": 83.9
+    },
+    {
+      "epoch": 11,
+      "steps": 8679,
+      "train_loss": 6.055534004989218,
+      "selection_loss": 6.530343532562256,
+      "selection_rel_sigma": 0.05569393187761307,
+      "seconds": 97.5
+    },
+    {
+      "epoch": 12,
+      "steps": 9468,
+      "train_loss": 5.846727643278689,
+      "selection_loss": 4.8780622482299805,
+      "selection_rel_sigma": 0.05235319584608078,
+      "seconds": 71.6
+    },
+    {
+      "epoch": 13,
+      "steps": 10257,
+      "train_loss": 5.7097127091941395,
+      "selection_loss": 9.378891944885254,
+      "selection_rel_sigma": 0.05211636424064636,
+      "seconds": 67.1
+    },
+    {
+      "epoch": 14,
+      "steps": 11046,
+      "train_loss": 5.601951387358726,
+      "selection_loss": 5.339406967163086,
+      "selection_rel_sigma": 0.05186928063631058,
+      "seconds": 65.0
+    },
+    {
+      "epoch": 15,
+      "steps": 11835,
+      "train_loss": 5.4521429036742015,
+      "selection_loss": 4.743121147155762,
+      "selection_rel_sigma": 0.05033164471387863,
+      "seconds": 91.4
+    },
+    {
+      "epoch": 16,
+      "steps": 12624,
+      "train_loss": 5.253245968276569,
+      "selection_loss": 5.18104887008667,
+      "selection_rel_sigma": 0.05028710514307022,
+      "seconds": 84.3
+    },
+    {
+      "epoch": 17,
+      "steps": 13413,
+      "train_loss": 5.112920048253632,
+      "selection_loss": 5.004345417022705,
+      "selection_rel_sigma": 0.04851793870329857,
+      "seconds": 112.5
+    },
+    {
+      "epoch": 18,
+      "steps": 14202,
+      "train_loss": 5.0072575123152925,
+      "selection_loss": 5.312348365783691,
+      "selection_rel_sigma": 0.04734615236520767,
+      "seconds": 102.6
+    },
+    {
+      "epoch": 19,
+      "steps": 14991,
+      "train_loss": 4.86570106469953,
+      "selection_loss": 5.940511703491211,
+      "selection_rel_sigma": 0.04595626890659332,
+      "seconds": 116.3
+    }
+  ],
+  "selected_epoch": 15,
+  "best_selection_loss": 4.743121147155762,
+  "hours": 0.649,
+  "device": "cuda",
+  "finished_utc": "2026-10-25T09:14:07+00:00"
+}

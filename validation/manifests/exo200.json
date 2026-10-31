@@ -1,0 +1,318 @@
+{
+  "dataset": "exo200",
+  "benchmark_version": "1.1",
+  "generated_utc": "2026-10-23T04:11:00+00:00",
+  "data_root": "/home/klz/Data/zeronu_benchmark/EXO-200",
+  "reader": "EXO200Reader",
+  "label_convention": "1 = signal-like = evaluation-positive class",
+  "signal_group": "signal",
+  "background_group": "background",
+  "profile": "strict600",
+  "protocol_sha256": "a46d4226b355c497ba410ec1258dfa3e13fbace114d18986a12dc027e5a7ee7c",
+  "splits": {
+    "train": {
+      "n": 336632,
+      "label_counts": {
+        "0": 175829,
+        "1": 160803
+      },
+      "group_counts": {
+        "background": 175829,
+        "signal": 160803
+      },
+      "ids_sha256_sorted": "5dff7ff7cce7fbe779933e6aa97c97c84112f41adc37beb6527179c8a566eee1",
+      "ids_sha256_canonical_order": "8b3870b59856de931ea344482c6b1e768d653a7db54a5d77caadecc0d8d1b884",
+      "labels_sha256_canonical_order": "578f6c56dd7ef7ce34986e4971aefa31503d40aa3c720deeb78c4d8e49451d68",
+      "energy_keV": {
+        "min": 492.05584716796875,
+        "max": 3897.439453125,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 3269,
+        "sha256_repr": "473b3dfd7c2ff17da0c480007ac73bc376c5dbeff474f1650eb79c6e4fc8e5ca"
+      },
+      "seconds_to_read": 0.9
+    },
+    "validation": {
+      "n": 37987,
+      "label_counts": {
+        "0": 20174,
+        "1": 17813
+      },
+      "group_counts": {
+        "background": 20174,
+        "signal": 17813
+      },
+      "ids_sha256_sorted": "796f54f48baaec3a32c9c3c3fc93081b55c05c9f4b40714e6164453f1a05bc62",
+      "ids_sha256_canonical_order": "be26ef950e0ded5ccbfa8800e05887073b29ddfabe8acf5b958e4850e0ca13ad",
+      "labels_sha256_canonical_order": "39d73ad350471b5eaf5bc06af9fb4105748b09cead5e91d114261f975950d59b",
+      "energy_keV": {
+        "min": 493.5534362792969,
+        "max": 3843.857177734375,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 362,
+        "sha256_repr": "cebdaa503d7804bf961a0116d5a1db35fad6e4c7f431d299224eb9fb3768b978"
+      },
+      "seconds_to_read": 0.1
+    },
+    "test": {
+      "n": 140383,
+      "label_counts": {
+        "0": 74321,
+        "1": 66062
+      },
+      "group_counts": {
+        "background": 74321,
+        "signal": 66062
+      },
+      "ids_sha256_sorted": "8f3a39391b6fd5ecea6f1306bb18b634271812e387af99e2c776ee6103cfdcde",
+      "ids_sha256_canonical_order": "3c0d21e997c1eb7cc5301b3783aa8daa834be46027314cca47ef41d80df78f89",
+      "labels_sha256_canonical_order": "0ae15a0bd618d6d186294853555d1fc6e38c37f6b972bed8af1d3b09724122b9",
+      "energy_keV": {
+        "min": 491.6553955078125,
+        "max": 3870.45166015625,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 1426,
+        "sha256_repr": "8a22178d9dcffc82dcc5e109be67e56c62351932841804a9e0814291a77333fc"
+      },
+      "seconds_to_read": 0.3
+    }
+  },
+  "label_regimes": {
+    "seed": 42,
+    "rule": "np.random.default_rng(seed).permutation(n_train)[:round(fraction*n_train)], positions into the canonical train order; subsets are nested",
+    "fractions": {
+      "0.01": {
+        "n": 3366,
+        "ids_sha256_sorted": "12c04039f344b62c510ff749afaf5020ee4a8e8586016780455b214afc1cfb8a",
+        "label_counts": {
+          "0": 1698,
+          "1": 1668
+        }
+      },
+      "0.1": {
+        "n": 33663,
+        "ids_sha256_sorted": "48cab52ab28dbd7dea0cb7b250d1b28df0cc5a08c19a176035faca17f53531df",
+        "label_counts": {
+          "0": 17595,
+          "1": 16068
+        }
+      },
+      "1.0": {
+        "n": 336632,
+        "ids_sha256_sorted": "5dff7ff7cce7fbe779933e6aa97c97c84112f41adc37beb6527179c8a566eee1",
+        "label_counts": {
+          "0": 175829,
+          "1": 160803
+        }
+      }
+    }
+  },
+  "energy_only_floor_test": {
+    "plus_energy": {
+      "inclusive_auc": 0.2792355806302845,
+      "matched_auc": 0.5000034405979845,
+      "matching_status": "ok",
+      "common_support_keV": [
+        538.1772625732422,
+        2662.5670739746092
+      ],
+      "valid_bins": 426,
+      "coverage": [
+        0.9414028336540143,
+        0.9456571099875875
+      ]
+    },
+    "minus_energy": {
+      "inclusive_auc": 0.7207644193697156,
+      "matched_auc": 0.4999965594018809,
+      "matching_status": "ok",
+      "common_support_keV": [
+        538.1772625732422,
+        2662.5670739746092
+      ],
+      "valid_bins": 426,
+      "coverage": [
+        0.9414028336540143,
+        0.9456571099875875
+      ]
+    }
+  },
+  "coarse": {
+    "split": "validation",
+    "seed": 7,
+    "fraction": 1.0,
+    "n": 37987,
+    "rule": "np.random.default_rng(seed).permutation(n_validation)[:round(fraction*n_validation)], positions into the canonical validation order; smallest candidate fraction with an estimable matched AUC and per-class coverage >= 0.5 x the full validation split's coverage",
+    "candidate_fractions": [
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "coverage_ratio_required": 0.5,
+    "minimum_fraction_for_this_dataset": 0.0,
+    "candidates": {
+      "0.005": {
+        "n": 190,
+        "matching_status": "not_estimable_no_eligible_bins",
+        "valid_bins": 0,
+        "coverage": [
+          0.0,
+          0.0
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.0,
+          0.0
+        ]
+      },
+      "0.01": {
+        "n": 380,
+        "matching_status": "not_estimable_no_eligible_bins",
+        "valid_bins": 0,
+        "coverage": [
+          0.0,
+          0.0
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.0,
+          0.0
+        ]
+      },
+      "0.02": {
+        "n": 760,
+        "matching_status": "not_estimable_no_eligible_bins",
+        "valid_bins": 0,
+        "coverage": [
+          0.0,
+          0.0
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.0,
+          0.0
+        ]
+      },
+      "0.05": {
+        "n": 1899,
+        "matching_status": "not_estimable_no_eligible_bins",
+        "valid_bins": 0,
+        "coverage": [
+          0.0,
+          0.0
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.0,
+          0.0
+        ]
+      },
+      "0.1": {
+        "n": 3799,
+        "matching_status": "not_estimable_low_coverage",
+        "valid_bins": 1,
+        "coverage": [
+          0.01568032372281234,
+          0.011525795828759604
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.023524566876181763,
+          0.014950047411177081
+        ]
+      },
+      "0.25": {
+        "n": 9497,
+        "matching_status": "not_estimable_low_coverage",
+        "valid_bins": 26,
+        "coverage": [
+          0.2082912032355915,
+          0.25153778558875217
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.3124910191176339,
+          0.32626830078587654
+        ]
+      },
+      "0.5": {
+        "n": 18994,
+        "matching_status": "not_estimable_low_coverage",
+        "valid_bins": 87,
+        "coverage": [
+          0.46379706381703784,
+          0.5817837657276472
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.6958163133371696,
+          0.7546285748857919
+        ]
+      },
+      "1.0": {
+        "n": 37987,
+        "matching_status": "ok",
+        "valid_bins": 202,
+        "coverage": [
+          0.6665510062456628,
+          0.7709537977881322
+        ],
+        "coverage_ratio_to_full_validation": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "full_validation_floor": {
+      "inclusive_auc": 0.28169035521318764,
+      "matched_auc": 0.4999861272472022,
+      "matching_status": "ok",
+      "common_support_keV": [
+        537.7820190429687,
+        2661.836414794922
+      ],
+      "valid_bins": 202,
+      "coverage": [
+        0.6665510062456628,
+        0.7709537977881322
+      ]
+    },
+    "label_counts": {
+      "0": 20174,
+      "1": 17813
+    },
+    "ids_sha256_sorted": "796f54f48baaec3a32c9c3c3fc93081b55c05c9f4b40714e6164453f1a05bc62",
+    "energy_only_floor": {
+      "plus_energy": {
+        "inclusive_auc": 0.28169035521318764,
+        "matched_auc": 0.4999861272472022,
+        "matching_status": "ok",
+        "common_support_keV": [
+          537.7820190429687,
+          2661.836414794922
+        ],
+        "valid_bins": 202,
+        "coverage": [
+          0.6665510062456628,
+          0.7709537977881322
+        ]
+      },
+      "minus_energy": {
+        "inclusive_auc": 0.7183096447868124,
+        "matched_auc": 0.5000138727527353,
+        "matching_status": "ok",
+        "common_support_keV": [
+          537.7820190429687,
+          2661.836414794922
+        ],
+        "valid_bins": 202,
+        "coverage": [
+          0.6665510062456628,
+          0.7709537977881322
+        ]
+      }
+    }
+  },
+  "ids_npz": "exo200_ids.npz"
+}

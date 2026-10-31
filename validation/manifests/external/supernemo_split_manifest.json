@@ -1,0 +1,6778 @@
+{
+  "content_sha256": "8b9296519c322256c947ceb0d842de02688ac7e02c31c6d72d423db0abd5d68a",
+  "counts": {
+    "classification": {
+      "test": {
+        "by_category": {
+          "2nu": 327680,
+          "Bi214": 262144
+        },
+        "total": 589824
+      },
+      "train": {
+        "by_category": {
+          "2nu": 2629632,
+          "Bi214": 2105618
+        },
+        "total": 4735250
+      },
+      "validation": {
+        "by_category": {
+          "2nu": 326804,
+          "Bi214": 266240
+        },
+        "total": 593044
+      }
+    },
+    "classification_excluded": {
+      "0nubb": 1987943,
+      "Tl208": 2549143
+    },
+    "energy": {
+      "test": {
+        "by_category": {
+          "0nubb": 196608,
+          "2nu": 327680,
+          "Bi214": 262144,
+          "Tl208": 253952
+        },
+        "total": 1040384
+      },
+      "train": {
+        "by_category": {
+          "0nubb": 1590631,
+          "2nu": 2629632,
+          "Bi214": 2105618,
+          "Tl208": 2041239
+        },
+        "total": 8367120
+      },
+      "validation": {
+        "by_category": {
+          "0nubb": 200704,
+          "2nu": 326804,
+          "Bi214": 266240,
+          "Tl208": 253952
+        },
+        "total": 1047700
+      }
+    }
+  },
+  "data_root": "/home/klz/Data/zeronu_benchmark/SuperNEMO",
+  "event_key": [
+    "source_key",
+    "ev_no"
+  ],
+  "files": [
+    {
+      "bytes": 4573397944,
+      "category": "0nubb",
+      "classification_label": null,
+      "file_name": "data_0nubb_merged.h5",
+      "index_file": "0nubb_event_offsets.npy",
+      "mtime_ns": 1787856824403059451,
+      "profile": {
+        "duplicate_event_keys": 0,
+        "empty_labels": 0,
+        "energy": {
+          "definition": "E1 + E2",
+          "max": 3226.5,
+          "min": 303.375,
+          "nan": 0,
+          "negative_infinity": 0,
+          "positive_infinity": 0,
+          "unit": "keV"
+        },
+        "event_constant_mismatches": {
+          "E1": 0,
+          "E2": 0,
+          "dY": 0,
+          "dZ": 0,
+          "phiR": 0,
+          "phiS": 0,
+          "theta": 0
+        },
+        "event_count": 1987943,
+        "event_id_gaps": 0,
+        "event_id_max": 1987942,
+        "event_id_min": 0,
+        "field_dtypes": {
+          "E1": "float32",
+          "E2": "float32",
+          "dY": "float32",
+          "dZ": "float32",
+          "ev_no": "int64",
+          "label": "object",
+          "phiR": "float32",
+          "phiS": "float32",
+          "tR": "float32",
+          "tX": "float32",
+          "tY": "float32",
+          "tZ": "float32",
+          "theta": "float32"
+        },
+        "field_lengths": {
+          "E1": 49707534,
+          "E2": 49707534,
+          "dY": 49707534,
+          "dZ": 49707534,
+          "ev_no": 49707534,
+          "label": 49707534,
+          "phiR": 49707534,
+          "phiS": 49707534,
+          "tR": 49707534,
+          "tX": 49707534,
+          "tY": 49707534,
+          "tZ": 49707534,
+          "theta": 49707534
+        },
+        "hits_per_event": {
+          "max": 155,
+          "min": 6
+        },
+        "label_values": [
+          "0nubb"
+        ],
+        "numeric": {
+          "E1": {
+            "max": 2941.5,
+            "min": 50.0390625,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "E2": {
+            "max": 2927.5,
+            "min": 50.0078125,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dY": {
+            "max": 3981.0,
+            "min": -3142.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dZ": {
+            "max": 2297.5,
+            "min": -2426.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiR": {
+            "max": 179.9375,
+            "min": 0.3665771484375,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiS": {
+            "max": 179.96875,
+            "min": 0.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tR": {
+            "max": 23.54296875,
+            "min": 0.006497383117675781,
+            "nan": 211500,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tX": {
+            "max": 405.0,
+            "min": -405.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tY": {
+            "max": 2464.0,
+            "min": -2464.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tZ": {
+            "max": 1482.0,
+            "min": -1483.75,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "theta": {
+            "max": 179.9375,
+            "min": 0.03448486328125,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          }
+        },
+        "row_count": 49707534,
+        "tR_affected_events": 200067
+      },
+      "raw_label": "0nubb",
+      "source_key": "0nubb"
+    },
+    {
+      "bytes": 7121195308,
+      "category": "2nu",
+      "classification_label": 1,
+      "file_name": "data_2nubb_merged.h5",
+      "index_file": "2nubb_event_offsets.npy",
+      "mtime_ns": 1787856809966737501,
+      "profile": {
+        "duplicate_event_keys": 0,
+        "empty_labels": 0,
+        "energy": {
+          "definition": "E1 + E2",
+          "max": 2830.25,
+          "min": 300.0,
+          "nan": 0,
+          "negative_infinity": 0,
+          "positive_infinity": 0,
+          "unit": "keV"
+        },
+        "event_constant_mismatches": {
+          "E1": 0,
+          "E2": 0,
+          "dY": 0,
+          "dZ": 0,
+          "phiR": 0,
+          "phiS": 0,
+          "theta": 0
+        },
+        "event_count": 3284116,
+        "event_id_gaps": 0,
+        "event_id_max": 3284115,
+        "event_id_min": 0,
+        "field_dtypes": {
+          "E1": "float32",
+          "E2": "float32",
+          "dY": "float32",
+          "dZ": "float32",
+          "ev_no": "int64",
+          "label": "object",
+          "phiR": "float32",
+          "phiS": "float32",
+          "tR": "float32",
+          "tX": "float32",
+          "tY": "float32",
+          "tZ": "float32",
+          "theta": "float32"
+        },
+        "field_lengths": {
+          "E1": 77399195,
+          "E2": 77399195,
+          "dY": 77399195,
+          "dZ": 77399195,
+          "ev_no": 77399195,
+          "label": 77399195,
+          "phiR": 77399195,
+          "phiS": 77399195,
+          "tR": 77399195,
+          "tX": 77399195,
+          "tY": 77399195,
+          "tZ": 77399195,
+          "theta": 77399195
+        },
+        "hits_per_event": {
+          "max": 172,
+          "min": 6
+        },
+        "label_values": [
+          "2nubb"
+        ],
+        "numeric": {
+          "E1": {
+            "max": 2383.0,
+            "min": 50.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "E2": {
+            "max": 2500.0,
+            "min": 50.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dY": {
+            "max": 3827.0,
+            "min": -2796.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dZ": {
+            "max": 2610.0,
+            "min": -2384.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiR": {
+            "max": 179.96875,
+            "min": 0.0962982177734375,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiS": {
+            "max": 179.9375,
+            "min": 0.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tR": {
+            "max": 23.54296875,
+            "min": 0.00708770751953125,
+            "nan": 318389,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tX": {
+            "max": 405.0,
+            "min": -405.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tY": {
+            "max": 2464.0,
+            "min": -2464.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tZ": {
+            "max": 1479.0,
+            "min": -1483.5,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "theta": {
+            "max": 179.96875,
+            "min": 0.05112457275390625,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          }
+        },
+        "row_count": 77399195,
+        "tR_affected_events": 302762
+      },
+      "raw_label": "2nubb",
+      "source_key": "2nubb"
+    },
+    {
+      "bytes": 5847162948,
+      "category": "Bi214",
+      "classification_label": 0,
+      "file_name": "data_Bi214_merged.h5",
+      "index_file": "Bi214_event_offsets.npy",
+      "mtime_ns": 1787856793418368298,
+      "profile": {
+        "duplicate_event_keys": 0,
+        "empty_labels": 0,
+        "energy": {
+          "definition": "E1 + E2",
+          "max": 3181.75,
+          "min": 300.0,
+          "nan": 0,
+          "negative_infinity": 0,
+          "positive_infinity": 0,
+          "unit": "keV"
+        },
+        "event_constant_mismatches": {
+          "E1": 0,
+          "E2": 0,
+          "dY": 0,
+          "dZ": 0,
+          "phiR": 0,
+          "phiS": 0,
+          "theta": 0
+        },
+        "event_count": 2634002,
+        "event_id_gaps": 0,
+        "event_id_max": 2634001,
+        "event_id_min": 0,
+        "field_dtypes": {
+          "E1": "float32",
+          "E2": "float32",
+          "dY": "float32",
+          "dZ": "float32",
+          "ev_no": "int64",
+          "label": "object",
+          "phiR": "float32",
+          "phiS": "float32",
+          "tR": "float32",
+          "tX": "float32",
+          "tY": "float32",
+          "tZ": "float32",
+          "theta": "float32"
+        },
+        "field_lengths": {
+          "E1": 63552001,
+          "E2": 63552001,
+          "dY": 63552001,
+          "dZ": 63552001,
+          "ev_no": 63552001,
+          "label": 63552001,
+          "phiR": 63552001,
+          "phiS": 63552001,
+          "tR": 63552001,
+          "tX": 63552001,
+          "tY": 63552001,
+          "tZ": 63552001,
+          "theta": 63552001
+        },
+        "hits_per_event": {
+          "max": 213,
+          "min": 6
+        },
+        "label_values": [
+          "Bi214"
+        ],
+        "numeric": {
+          "E1": {
+            "max": 3032.5,
+            "min": 50.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "E2": {
+            "max": 3060.5,
+            "min": 50.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dY": {
+            "max": 4682.0,
+            "min": -4684.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dZ": {
+            "max": 2695.0,
+            "min": -2668.5,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiR": {
+            "max": 179.9375,
+            "min": 0.121368408203125,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiS": {
+            "max": 179.90625,
+            "min": 0.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tR": {
+            "max": 23.54296875,
+            "min": 0.0065784454345703125,
+            "nan": 380175,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tX": {
+            "max": 405.0,
+            "min": -405.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tY": {
+            "max": 2464.0,
+            "min": -2464.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tZ": {
+            "max": 1480.75,
+            "min": -1486.5,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "theta": {
+            "max": 179.8125,
+            "min": 0.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          }
+        },
+        "row_count": 63552001,
+        "tR_affected_events": 323315
+      },
+      "raw_label": "Bi214",
+      "source_key": "Bi214"
+    },
+    {
+      "bytes": 5514190096,
+      "category": "Tl208",
+      "classification_label": null,
+      "file_name": "data_Tl208_merged.h5",
+      "index_file": "Tl208_event_offsets.npy",
+      "mtime_ns": 1787856837439350081,
+      "profile": {
+        "duplicate_event_keys": 0,
+        "empty_labels": 0,
+        "energy": {
+          "definition": "E1 + E2",
+          "max": 3500.125,
+          "min": 299.984375,
+          "nan": 0,
+          "negative_infinity": 0,
+          "positive_infinity": 0,
+          "unit": "keV"
+        },
+        "event_constant_mismatches": {
+          "E1": 0,
+          "E2": 0,
+          "dY": 0,
+          "dZ": 0,
+          "phiR": 0,
+          "phiS": 0,
+          "theta": 0
+        },
+        "event_count": 2549143,
+        "event_id_gaps": 0,
+        "event_id_max": 2549142,
+        "event_id_min": 0,
+        "field_dtypes": {
+          "E1": "float32",
+          "E2": "float32",
+          "dY": "float32",
+          "dZ": "float32",
+          "ev_no": "int64",
+          "label": "object",
+          "phiR": "float32",
+          "phiS": "float32",
+          "tR": "float32",
+          "tX": "float32",
+          "tY": "float32",
+          "tZ": "float32",
+          "theta": "float32"
+        },
+        "field_lengths": {
+          "E1": 59932932,
+          "E2": 59932932,
+          "dY": 59932932,
+          "dZ": 59932932,
+          "ev_no": 59932932,
+          "label": 59932932,
+          "phiR": 59932932,
+          "phiS": 59932932,
+          "tR": 59932932,
+          "tX": 59932932,
+          "tY": 59932932,
+          "tZ": 59932932,
+          "theta": 59932932
+        },
+        "hits_per_event": {
+          "max": 157,
+          "min": 6
+        },
+        "label_values": [
+          "Tl208"
+        ],
+        "numeric": {
+          "E1": {
+            "max": 3418.0,
+            "min": 50.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "E2": {
+            "max": 3395.5,
+            "min": 50.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dY": {
+            "max": 4631.0,
+            "min": -4586.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "dZ": {
+            "max": 2668.0,
+            "min": -2647.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiR": {
+            "max": 179.9375,
+            "min": 0.1233673095703125,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "phiS": {
+            "max": 179.9375,
+            "min": 0.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tR": {
+            "max": 23.54296875,
+            "min": 0.006987571716308594,
+            "nan": 245509,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tX": {
+            "max": 405.0,
+            "min": -405.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tY": {
+            "max": 2464.0,
+            "min": -2464.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "tZ": {
+            "max": 1491.75,
+            "min": -1489.25,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          },
+          "theta": {
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0,
+            "negative_infinity": 0,
+            "positive_infinity": 0
+          }
+        },
+        "row_count": 59932932,
+        "tR_affected_events": 233525
+      },
+      "raw_label": "Tl208",
+      "source_key": "Tl208"
+    }
+  ],
+  "grouping": {
+    "higher_level_fields_available": [],
+    "note": "No run or simulation-batch field exists in the release.",
+    "unit": "complete_event"
+  },
+  "input_policy": {
+    "excluded_from_model": [
+      "E1",
+      "E2",
+      "label",
+      "category",
+      "source_key",
+      "file_name",
+      "ev_no",
+      "tR",
+      "dY",
+      "dZ",
+      "theta",
+      "phiS",
+      "phiR"
+    ],
+    "fields": [
+      "tX",
+      "tY",
+      "tZ"
+    ],
+    "representation": "topology_only"
+  },
+  "inventory": [
+    {
+      "bytes": 4573397944,
+      "category": "0nubb",
+      "classification_label": null,
+      "file_name": "data_0nubb_merged.h5",
+      "mtime_ns": 1787856824403059451,
+      "raw_label": "0nubb",
+      "source_key": "0nubb"
+    },
+    {
+      "bytes": 7121195308,
+      "category": "2nu",
+      "classification_label": 1,
+      "file_name": "data_2nubb_merged.h5",
+      "mtime_ns": 1787856809966737501,
+      "raw_label": "2nubb",
+      "source_key": "2nubb"
+    },
+    {
+      "bytes": 5847162948,
+      "category": "Bi214",
+      "classification_label": 0,
+      "file_name": "data_Bi214_merged.h5",
+      "mtime_ns": 1787856793418368298,
+      "raw_label": "Bi214",
+      "source_key": "Bi214"
+    },
+    {
+      "bytes": 5514190096,
+      "category": "Tl208",
+      "classification_label": null,
+      "file_name": "data_Tl208_merged.h5",
+      "mtime_ns": 1787856837439350081,
+      "raw_label": "Tl208",
+      "source_key": "Tl208"
+    }
+  ],
+  "schema_version": 1,
+  "settings": {
+    "classification_labels": {
+      "2nu": 1,
+      "Bi214": 0
+    },
+    "energy_fields": [
+      "E1",
+      "E2"
+    ],
+    "energy_target": "E1 + E2",
+    "energy_unit": "keV",
+    "required_fields": [
+      "ev_no",
+      "E1",
+      "E2",
+      "tX",
+      "tY",
+      "tZ",
+      "tR",
+      "dY",
+      "dZ",
+      "theta",
+      "phiS",
+      "phiR",
+      "label"
+    ],
+    "seed": 42,
+    "split_block_events": 4096,
+    "split_fractions": [
+      0.8,
+      0.1,
+      0.1
+    ]
+  },
+  "splits": {
+    "test": [
+      {
+        "event_count": 4096,
+        "event_start": 24576,
+        "event_stop": 28672,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 57344,
+        "event_stop": 69632,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 90112,
+        "event_stop": 98304,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 139264,
+        "event_stop": 151552,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 167936,
+        "event_stop": 172032,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 200704,
+        "event_stop": 204800,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 397312,
+        "event_stop": 401408,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 417792,
+        "event_stop": 421888,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 446464,
+        "event_stop": 454656,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 462848,
+        "event_stop": 466944,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 557056,
+        "event_stop": 565248,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 569344,
+        "event_stop": 573440,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 577536,
+        "event_stop": 581632,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 667648,
+        "event_stop": 671744,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 716800,
+        "event_stop": 720896,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 745472,
+        "event_stop": 749568,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 778240,
+        "event_stop": 782336,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 794624,
+        "event_stop": 802816,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 970752,
+        "event_stop": 974848,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 983040,
+        "event_stop": 987136,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1114112,
+        "event_stop": 1118208,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1126400,
+        "event_stop": 1130496,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1142784,
+        "event_stop": 1146880,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1171456,
+        "event_stop": 1179648,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1228800,
+        "event_stop": 1232896,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1241088,
+        "event_stop": 1245184,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1286144,
+        "event_stop": 1290240,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1294336,
+        "event_stop": 1298432,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1310720,
+        "event_stop": 1314816,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1363968,
+        "event_stop": 1368064,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1499136,
+        "event_stop": 1503232,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1622016,
+        "event_stop": 1626112,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1720320,
+        "event_stop": 1724416,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1765376,
+        "event_stop": 1773568,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1789952,
+        "event_stop": 1794048,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1839104,
+        "event_stop": 1843200,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1888256,
+        "event_stop": 1892352,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1912832,
+        "event_stop": 1916928,
+        "source_key": "0nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 0,
+        "event_stop": 4096,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 32768,
+        "event_stop": 36864,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 61440,
+        "event_stop": 65536,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 159744,
+        "event_stop": 163840,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 172032,
+        "event_stop": 176128,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 282624,
+        "event_stop": 286720,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 323584,
+        "event_stop": 327680,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 331776,
+        "event_stop": 335872,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 421888,
+        "event_stop": 430080,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 446464,
+        "event_stop": 450560,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 536576,
+        "event_stop": 540672,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 552960,
+        "event_stop": 557056,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 737280,
+        "event_stop": 741376,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 872448,
+        "event_stop": 876544,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 929792,
+        "event_stop": 933888,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 970752,
+        "event_stop": 974848,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1028096,
+        "event_stop": 1036288,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1093632,
+        "event_stop": 1105920,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1134592,
+        "event_stop": 1138688,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1171456,
+        "event_stop": 1175552,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1187840,
+        "event_stop": 1191936,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1200128,
+        "event_stop": 1204224,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1228800,
+        "event_stop": 1232896,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1273856,
+        "event_stop": 1277952,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1298432,
+        "event_stop": 1302528,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1392640,
+        "event_stop": 1396736,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1400832,
+        "event_stop": 1409024,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1425408,
+        "event_stop": 1429504,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1458176,
+        "event_stop": 1462272,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1552384,
+        "event_stop": 1556480,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1593344,
+        "event_stop": 1597440,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1634304,
+        "event_stop": 1638400,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1761280,
+        "event_stop": 1765376,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1773568,
+        "event_stop": 1777664,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1875968,
+        "event_stop": 1880064,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1888256,
+        "event_stop": 1892352,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1900544,
+        "event_stop": 1904640,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1908736,
+        "event_stop": 1912832,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1933312,
+        "event_stop": 1937408,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2060288,
+        "event_stop": 2064384,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2076672,
+        "event_stop": 2080768,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2138112,
+        "event_stop": 2142208,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2170880,
+        "event_stop": 2174976,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2187264,
+        "event_stop": 2191360,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2199552,
+        "event_stop": 2203648,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2220032,
+        "event_stop": 2224128,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2293760,
+        "event_stop": 2297856,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2310144,
+        "event_stop": 2318336,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2326528,
+        "event_stop": 2330624,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2347008,
+        "event_stop": 2355200,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2437120,
+        "event_stop": 2441216,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2461696,
+        "event_stop": 2465792,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2523136,
+        "event_stop": 2527232,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2535424,
+        "event_stop": 2539520,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2596864,
+        "event_stop": 2605056,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2699264,
+        "event_stop": 2703360,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2756608,
+        "event_stop": 2760704,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2842624,
+        "event_stop": 2846720,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2854912,
+        "event_stop": 2863104,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2912256,
+        "event_stop": 2916352,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2928640,
+        "event_stop": 2932736,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2949120,
+        "event_stop": 2953216,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2998272,
+        "event_stop": 3002368,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3026944,
+        "event_stop": 3031040,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3043328,
+        "event_stop": 3047424,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3055616,
+        "event_stop": 3059712,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3096576,
+        "event_stop": 3100672,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3125248,
+        "event_stop": 3129344,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3145728,
+        "event_stop": 3149824,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3182592,
+        "event_stop": 3186688,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3190784,
+        "event_stop": 3194880,
+        "source_key": "2nubb",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 16384,
+        "event_stop": 20480,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 57344,
+        "event_stop": 61440,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 73728,
+        "event_stop": 81920,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 126976,
+        "event_stop": 131072,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 212992,
+        "event_stop": 217088,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 278528,
+        "event_stop": 282624,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 348160,
+        "event_stop": 352256,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 417792,
+        "event_stop": 421888,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 425984,
+        "event_stop": 430080,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 454656,
+        "event_stop": 458752,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 471040,
+        "event_stop": 475136,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 487424,
+        "event_stop": 491520,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 503808,
+        "event_stop": 507904,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 569344,
+        "event_stop": 573440,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 606208,
+        "event_stop": 610304,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 638976,
+        "event_stop": 643072,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 684032,
+        "event_stop": 688128,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 798720,
+        "event_stop": 802816,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 958464,
+        "event_stop": 962560,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1077248,
+        "event_stop": 1081344,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1191936,
+        "event_stop": 1200128,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1245184,
+        "event_stop": 1249280,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1273856,
+        "event_stop": 1282048,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1290240,
+        "event_stop": 1294336,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1302528,
+        "event_stop": 1306624,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1327104,
+        "event_stop": 1331200,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1363968,
+        "event_stop": 1368064,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1396736,
+        "event_stop": 1400832,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1482752,
+        "event_stop": 1486848,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1511424,
+        "event_stop": 1515520,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1523712,
+        "event_stop": 1527808,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1589248,
+        "event_stop": 1593344,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1601536,
+        "event_stop": 1605632,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1646592,
+        "event_stop": 1650688,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1699840,
+        "event_stop": 1703936,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1744896,
+        "event_stop": 1748992,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1777664,
+        "event_stop": 1781760,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1785856,
+        "event_stop": 1789952,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1814528,
+        "event_stop": 1818624,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1822720,
+        "event_stop": 1826816,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1855488,
+        "event_stop": 1859584,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1892352,
+        "event_stop": 1896448,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1949696,
+        "event_stop": 1953792,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2072576,
+        "event_stop": 2076672,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2084864,
+        "event_stop": 2088960,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2117632,
+        "event_stop": 2121728,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2138112,
+        "event_stop": 2142208,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2179072,
+        "event_stop": 2183168,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2195456,
+        "event_stop": 2199552,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2314240,
+        "event_stop": 2318336,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2326528,
+        "event_stop": 2330624,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2428928,
+        "event_stop": 2433024,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2437120,
+        "event_stop": 2441216,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2449408,
+        "event_stop": 2457600,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2461696,
+        "event_stop": 2469888,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2506752,
+        "event_stop": 2510848,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2584576,
+        "event_stop": 2588672,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2613248,
+        "event_stop": 2617344,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2629632,
+        "event_stop": 2633728,
+        "source_key": "Bi214",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 28672,
+        "event_stop": 32768,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 53248,
+        "event_stop": 57344,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 139264,
+        "event_stop": 143360,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 155648,
+        "event_stop": 159744,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 180224,
+        "event_stop": 184320,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 237568,
+        "event_stop": 241664,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 262144,
+        "event_stop": 266240,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 323584,
+        "event_stop": 331776,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 409600,
+        "event_stop": 413696,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 421888,
+        "event_stop": 425984,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 434176,
+        "event_stop": 438272,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 446464,
+        "event_stop": 450560,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 471040,
+        "event_stop": 475136,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 516096,
+        "event_stop": 520192,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 618496,
+        "event_stop": 622592,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 716800,
+        "event_stop": 720896,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 745472,
+        "event_stop": 749568,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 794624,
+        "event_stop": 798720,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 995328,
+        "event_stop": 1003520,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1007616,
+        "event_stop": 1011712,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1019904,
+        "event_stop": 1024000,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1036288,
+        "event_stop": 1040384,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1097728,
+        "event_stop": 1101824,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1146880,
+        "event_stop": 1150976,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1212416,
+        "event_stop": 1216512,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1253376,
+        "event_stop": 1257472,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1269760,
+        "event_stop": 1273856,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1282048,
+        "event_stop": 1286144,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1314816,
+        "event_stop": 1318912,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1327104,
+        "event_stop": 1331200,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1388544,
+        "event_stop": 1392640,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1433600,
+        "event_stop": 1437696,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1495040,
+        "event_stop": 1503232,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1548288,
+        "event_stop": 1552384,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1622016,
+        "event_stop": 1626112,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1642496,
+        "event_stop": 1646592,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1798144,
+        "event_stop": 1806336,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1925120,
+        "event_stop": 1929216,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1953792,
+        "event_stop": 1957888,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1966080,
+        "event_stop": 1970176,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1974272,
+        "event_stop": 1978368,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2064384,
+        "event_stop": 2068480,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2191360,
+        "event_stop": 2195456,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2252800,
+        "event_stop": 2256896,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2277376,
+        "event_stop": 2281472,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2289664,
+        "event_stop": 2293760,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2301952,
+        "event_stop": 2306048,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2330624,
+        "event_stop": 2334720,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2355200,
+        "event_stop": 2359296,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2371584,
+        "event_stop": 2375680,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2387968,
+        "event_stop": 2392064,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2428928,
+        "event_stop": 2433024,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2461696,
+        "event_stop": 2465792,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2469888,
+        "event_stop": 2473984,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2498560,
+        "event_stop": 2502656,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2506752,
+        "event_stop": 2510848,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2514944,
+        "event_stop": 2519040,
+        "source_key": "Tl208",
+        "split": "test"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2527232,
+        "event_stop": 2531328,
+        "source_key": "Tl208",
+        "split": "test"
+      }
+    ],
+    "train": [
+      {
+        "event_count": 4096,
+        "event_start": 0,
+        "event_stop": 4096,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 8192,
+        "event_stop": 24576,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 28672,
+        "event_stop": 40960,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 45056,
+        "event_stop": 57344,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 73728,
+        "event_stop": 90112,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 98304,
+        "event_stop": 126976,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 131072,
+        "event_stop": 139264,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 151552,
+        "event_stop": 167936,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 180224,
+        "event_stop": 200704,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 204800,
+        "event_stop": 233472,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 237568,
+        "event_stop": 258048,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 262144,
+        "event_stop": 266240,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 270336,
+        "event_stop": 282624,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 286720,
+        "event_stop": 290816,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 294912,
+        "event_stop": 303104,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 307200,
+        "event_stop": 311296,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 81920,
+        "event_start": 315392,
+        "event_stop": 397312,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 401408,
+        "event_stop": 405504,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 409600,
+        "event_stop": 417792,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 421888,
+        "event_stop": 430080,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 434176,
+        "event_stop": 446464,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 454656,
+        "event_stop": 462848,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 466944,
+        "event_stop": 475136,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 483328,
+        "event_stop": 499712,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 503808,
+        "event_stop": 512000,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 516096,
+        "event_stop": 528384,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 532480,
+        "event_stop": 557056,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 565248,
+        "event_stop": 569344,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 573440,
+        "event_stop": 577536,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 581632,
+        "event_stop": 643072,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 647168,
+        "event_stop": 655360,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 659456,
+        "event_stop": 667648,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 671744,
+        "event_stop": 684032,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 688128,
+        "event_stop": 716800,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 720896,
+        "event_stop": 724992,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 729088,
+        "event_stop": 745472,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 749568,
+        "event_stop": 765952,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 770048,
+        "event_stop": 778240,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 782336,
+        "event_stop": 794624,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 49152,
+        "event_start": 802816,
+        "event_stop": 851968,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 856064,
+        "event_stop": 868352,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 872448,
+        "event_stop": 913408,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 49152,
+        "event_start": 921600,
+        "event_stop": 970752,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 974848,
+        "event_stop": 983040,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 106496,
+        "event_start": 987136,
+        "event_stop": 1093632,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1097728,
+        "event_stop": 1114112,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1118208,
+        "event_stop": 1126400,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1130496,
+        "event_stop": 1134592,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1138688,
+        "event_stop": 1142784,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1146880,
+        "event_stop": 1171456,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1179648,
+        "event_stop": 1187840,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1191936,
+        "event_stop": 1212416,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1220608,
+        "event_stop": 1228800,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1232896,
+        "event_stop": 1241088,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1245184,
+        "event_stop": 1265664,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1269760,
+        "event_stop": 1282048,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1290240,
+        "event_stop": 1294336,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1302528,
+        "event_stop": 1310720,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1314816,
+        "event_stop": 1331200,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1335296,
+        "event_stop": 1363968,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 1368064,
+        "event_stop": 1429504,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 65536,
+        "event_start": 1433600,
+        "event_stop": 1499136,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1503232,
+        "event_stop": 1523712,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 94208,
+        "event_start": 1527808,
+        "event_stop": 1622016,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1626112,
+        "event_stop": 1630208,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1634304,
+        "event_stop": 1642496,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 69632,
+        "event_start": 1646592,
+        "event_stop": 1716224,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 1724416,
+        "event_stop": 1757184,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1761280,
+        "event_stop": 1765376,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1773568,
+        "event_stop": 1789952,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1798144,
+        "event_stop": 1822720,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1826816,
+        "event_stop": 1839104,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1843200,
+        "event_stop": 1863680,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1867776,
+        "event_stop": 1888256,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1892352,
+        "event_stop": 1912832,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1916928,
+        "event_stop": 1921024,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 57344,
+        "event_start": 1925120,
+        "event_stop": 1982464,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 1383,
+        "event_start": 1986560,
+        "event_stop": 1987943,
+        "source_key": "0nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 4096,
+        "event_stop": 16384,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 20480,
+        "event_stop": 28672,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 36864,
+        "event_stop": 57344,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 65536,
+        "event_stop": 90112,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 65536,
+        "event_start": 94208,
+        "event_stop": 159744,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 163840,
+        "event_stop": 172032,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 106496,
+        "event_start": 176128,
+        "event_stop": 282624,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 286720,
+        "event_stop": 323584,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 327680,
+        "event_stop": 331776,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 65536,
+        "event_start": 335872,
+        "event_stop": 401408,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 405504,
+        "event_stop": 417792,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 430080,
+        "event_stop": 446464,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 57344,
+        "event_start": 450560,
+        "event_stop": 507904,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 512000,
+        "event_stop": 536576,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 540672,
+        "event_stop": 552960,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 49152,
+        "event_start": 561152,
+        "event_stop": 610304,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 614400,
+        "event_stop": 675840,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 57344,
+        "event_start": 679936,
+        "event_stop": 737280,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 745472,
+        "event_stop": 786432,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 49152,
+        "event_start": 794624,
+        "event_stop": 843776,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 847872,
+        "event_stop": 864256,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 868352,
+        "event_stop": 872448,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 876544,
+        "event_stop": 888832,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 892928,
+        "event_stop": 929792,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 937984,
+        "event_stop": 970752,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 974848,
+        "event_stop": 1019904,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1036288,
+        "event_stop": 1060864,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1064960,
+        "event_stop": 1073152,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1077248,
+        "event_stop": 1093632,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1105920,
+        "event_stop": 1134592,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1142784,
+        "event_stop": 1171456,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1175552,
+        "event_stop": 1183744,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1191936,
+        "event_stop": 1200128,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1204224,
+        "event_stop": 1220608,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1224704,
+        "event_stop": 1228800,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1232896,
+        "event_stop": 1257472,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1261568,
+        "event_stop": 1265664,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1269760,
+        "event_stop": 1273856,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1277952,
+        "event_stop": 1298432,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1302528,
+        "event_stop": 1306624,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 1314816,
+        "event_stop": 1376256,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1380352,
+        "event_stop": 1392640,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1409024,
+        "event_stop": 1425408,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1429504,
+        "event_stop": 1458176,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1462272,
+        "event_stop": 1490944,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 57344,
+        "event_start": 1495040,
+        "event_stop": 1552384,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1556480,
+        "event_stop": 1564672,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1568768,
+        "event_stop": 1593344,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1597440,
+        "event_stop": 1609728,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1613824,
+        "event_stop": 1617920,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1622016,
+        "event_stop": 1626112,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1630208,
+        "event_stop": 1634304,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1638400,
+        "event_stop": 1650688,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1654784,
+        "event_stop": 1683456,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1687552,
+        "event_stop": 1699840,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1708032,
+        "event_stop": 1724416,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 1728512,
+        "event_stop": 1761280,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1765376,
+        "event_stop": 1773568,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 1777664,
+        "event_stop": 1822720,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1830912,
+        "event_stop": 1851392,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1855488,
+        "event_stop": 1863680,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1871872,
+        "event_stop": 1875968,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1884160,
+        "event_stop": 1888256,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1892352,
+        "event_stop": 1900544,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1904640,
+        "event_stop": 1908736,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1912832,
+        "event_stop": 1921024,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1929216,
+        "event_stop": 1933312,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 57344,
+        "event_start": 1937408,
+        "event_stop": 1994752,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 2002944,
+        "event_stop": 2039808,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2048000,
+        "event_stop": 2060288,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2064384,
+        "event_stop": 2076672,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2080768,
+        "event_stop": 2088960,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2105344,
+        "event_stop": 2125824,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2129920,
+        "event_stop": 2138112,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 2142208,
+        "event_stop": 2170880,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2174976,
+        "event_stop": 2187264,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2191360,
+        "event_stop": 2199552,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2207744,
+        "event_stop": 2220032,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2232320,
+        "event_stop": 2236416,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 2240512,
+        "event_stop": 2265088,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 2269184,
+        "event_stop": 2293760,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2297856,
+        "event_stop": 2310144,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2318336,
+        "event_stop": 2326528,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2330624,
+        "event_stop": 2347008,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2355200,
+        "event_stop": 2375680,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2379776,
+        "event_stop": 2396160,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 2400256,
+        "event_stop": 2437120,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2441216,
+        "event_stop": 2461696,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2465792,
+        "event_stop": 2478080,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 2482176,
+        "event_stop": 2523136,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2527232,
+        "event_stop": 2535424,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 57344,
+        "event_start": 2539520,
+        "event_stop": 2596864,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2605056,
+        "event_stop": 2617344,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2621440,
+        "event_stop": 2629632,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2633728,
+        "event_stop": 2654208,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 2658304,
+        "event_stop": 2686976,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2691072,
+        "event_stop": 2699264,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2703360,
+        "event_stop": 2711552,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 2719744,
+        "event_stop": 2756608,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 73728,
+        "event_start": 2760704,
+        "event_stop": 2834432,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2838528,
+        "event_stop": 2842624,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2850816,
+        "event_stop": 2854912,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 2863104,
+        "event_stop": 2908160,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2916352,
+        "event_stop": 2928640,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2932736,
+        "event_stop": 2945024,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 2953216,
+        "event_stop": 2998272,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 3002368,
+        "event_stop": 3014656,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3018752,
+        "event_stop": 3022848,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 3035136,
+        "event_stop": 3043328,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 3047424,
+        "event_stop": 3055616,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 3059712,
+        "event_stop": 3096576,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 3100672,
+        "event_stop": 3125248,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 3129344,
+        "event_stop": 3145728,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 3149824,
+        "event_stop": 3182592,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3186688,
+        "event_stop": 3190784,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 3194880,
+        "event_stop": 3203072,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 73728,
+        "event_start": 3207168,
+        "event_stop": 3280896,
+        "source_key": "2nubb",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 0,
+        "event_stop": 16384,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 20480,
+        "event_stop": 57344,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 61440,
+        "event_stop": 73728,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 81920,
+        "event_stop": 126976,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 81920,
+        "event_start": 131072,
+        "event_stop": 212992,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 217088,
+        "event_stop": 278528,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 286720,
+        "event_stop": 319488,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 323584,
+        "event_stop": 344064,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 356352,
+        "event_stop": 417792,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 421888,
+        "event_stop": 425984,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 430080,
+        "event_stop": 454656,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 458752,
+        "event_stop": 471040,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 475136,
+        "event_stop": 479232,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 483328,
+        "event_stop": 487424,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 491520,
+        "event_stop": 503808,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 507904,
+        "event_stop": 512000,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 53248,
+        "event_start": 516096,
+        "event_stop": 569344,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 573440,
+        "event_stop": 577536,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 581632,
+        "event_stop": 606208,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 610304,
+        "event_stop": 634880,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 643072,
+        "event_stop": 675840,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 679936,
+        "event_stop": 684032,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 692224,
+        "event_stop": 704512,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 708608,
+        "event_stop": 737280,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 741376,
+        "event_stop": 745472,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 749568,
+        "event_stop": 774144,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 778240,
+        "event_stop": 786432,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 794624,
+        "event_stop": 798720,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 802816,
+        "event_stop": 831488,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 835584,
+        "event_stop": 839680,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 843776,
+        "event_stop": 872448,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 888832,
+        "event_stop": 929792,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 933888,
+        "event_stop": 958464,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 962560,
+        "event_stop": 1007616,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1011712,
+        "event_stop": 1015808,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 1019904,
+        "event_stop": 1056768,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1060864,
+        "event_stop": 1077248,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1081344,
+        "event_stop": 1093632,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 77824,
+        "event_start": 1097728,
+        "event_stop": 1175552,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1179648,
+        "event_stop": 1187840,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1200128,
+        "event_stop": 1216512,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1220608,
+        "event_stop": 1232896,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1241088,
+        "event_stop": 1245184,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1249280,
+        "event_stop": 1257472,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1261568,
+        "event_stop": 1269760,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1282048,
+        "event_stop": 1290240,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1294336,
+        "event_stop": 1302528,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1306624,
+        "event_stop": 1327104,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 1331200,
+        "event_stop": 1363968,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1368064,
+        "event_stop": 1372160,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1376256,
+        "event_stop": 1396736,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1400832,
+        "event_stop": 1413120,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1417216,
+        "event_stop": 1421312,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1425408,
+        "event_stop": 1433600,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 1437696,
+        "event_stop": 1482752,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1486848,
+        "event_stop": 1511424,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1515520,
+        "event_stop": 1523712,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 1527808,
+        "event_stop": 1589248,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1593344,
+        "event_stop": 1601536,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1605632,
+        "event_stop": 1609728,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1613824,
+        "event_stop": 1630208,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1634304,
+        "event_stop": 1642496,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1650688,
+        "event_stop": 1679360,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1683456,
+        "event_stop": 1699840,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 1703936,
+        "event_stop": 1740800,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1748992,
+        "event_stop": 1777664,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1789952,
+        "event_stop": 1814528,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1818624,
+        "event_stop": 1822720,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 28672,
+        "event_start": 1826816,
+        "event_stop": 1855488,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1859584,
+        "event_stop": 1863680,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1867776,
+        "event_stop": 1880064,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1884160,
+        "event_stop": 1892352,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1896448,
+        "event_stop": 1921024,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1933312,
+        "event_stop": 1949696,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1953792,
+        "event_stop": 1978368,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 90112,
+        "event_start": 1982464,
+        "event_stop": 2072576,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2080768,
+        "event_stop": 2084864,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2088960,
+        "event_stop": 2101248,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2105344,
+        "event_stop": 2117632,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2121728,
+        "event_stop": 2134016,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2142208,
+        "event_stop": 2150400,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2154496,
+        "event_stop": 2162688,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2166784,
+        "event_stop": 2170880,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2174976,
+        "event_stop": 2179072,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2183168,
+        "event_stop": 2195456,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 49152,
+        "event_start": 2199552,
+        "event_stop": 2248704,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2252800,
+        "event_stop": 2269184,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2273280,
+        "event_stop": 2289664,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2293760,
+        "event_stop": 2314240,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2318336,
+        "event_stop": 2326528,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2334720,
+        "event_stop": 2338816,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 73728,
+        "event_start": 2342912,
+        "event_stop": 2416640,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2420736,
+        "event_stop": 2428928,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2433024,
+        "event_stop": 2437120,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2441216,
+        "event_stop": 2449408,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2457600,
+        "event_stop": 2461696,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2469888,
+        "event_stop": 2473984,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2478080,
+        "event_stop": 2490368,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2494464,
+        "event_stop": 2506752,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 73728,
+        "event_start": 2510848,
+        "event_stop": 2584576,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 2588672,
+        "event_stop": 2613248,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2617344,
+        "event_stop": 2625536,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 274,
+        "event_start": 2633728,
+        "event_stop": 2634002,
+        "source_key": "Bi214",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 0,
+        "event_stop": 12288,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 16384,
+        "event_stop": 28672,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 32768,
+        "event_stop": 53248,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 57344,
+        "event_stop": 90112,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 94208,
+        "event_stop": 118784,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 122880,
+        "event_stop": 139264,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 143360,
+        "event_stop": 147456,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 151552,
+        "event_stop": 155648,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 159744,
+        "event_stop": 176128,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 184320,
+        "event_stop": 196608,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 200704,
+        "event_stop": 221184,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 229376,
+        "event_stop": 237568,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 245760,
+        "event_stop": 262144,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 266240,
+        "event_stop": 303104,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 307200,
+        "event_stop": 319488,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 331776,
+        "event_stop": 352256,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 356352,
+        "event_stop": 360448,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 364544,
+        "event_stop": 372736,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 376832,
+        "event_stop": 389120,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 393216,
+        "event_stop": 409600,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 413696,
+        "event_stop": 421888,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 425984,
+        "event_stop": 434176,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 438272,
+        "event_stop": 446464,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 450560,
+        "event_stop": 471040,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 475136,
+        "event_stop": 516096,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 98304,
+        "event_start": 520192,
+        "event_stop": 618496,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 622592,
+        "event_stop": 634880,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 638976,
+        "event_stop": 647168,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 651264,
+        "event_stop": 655360,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 659456,
+        "event_stop": 704512,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 708608,
+        "event_stop": 716800,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 720896,
+        "event_stop": 745472,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 749568,
+        "event_stop": 782336,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 786432,
+        "event_stop": 794624,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 98304,
+        "event_start": 798720,
+        "event_stop": 897024,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 901120,
+        "event_stop": 946176,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 950272,
+        "event_stop": 995328,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1003520,
+        "event_stop": 1007616,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1011712,
+        "event_stop": 1015808,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1024000,
+        "event_stop": 1036288,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 1040384,
+        "event_stop": 1081344,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1085440,
+        "event_stop": 1097728,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1101824,
+        "event_stop": 1110016,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1114112,
+        "event_stop": 1118208,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1122304,
+        "event_stop": 1146880,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 1150976,
+        "event_stop": 1212416,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 1220608,
+        "event_stop": 1253376,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1257472,
+        "event_stop": 1269760,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1273856,
+        "event_stop": 1282048,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1286144,
+        "event_stop": 1306624,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1310720,
+        "event_stop": 1314816,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1318912,
+        "event_stop": 1327104,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1331200,
+        "event_stop": 1343488,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 1347584,
+        "event_stop": 1388544,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 40960,
+        "event_start": 1392640,
+        "event_stop": 1433600,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1437696,
+        "event_stop": 1454080,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1462272,
+        "event_stop": 1482752,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1486848,
+        "event_stop": 1495040,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 1503232,
+        "event_stop": 1548288,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 45056,
+        "event_start": 1552384,
+        "event_stop": 1597440,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1601536,
+        "event_stop": 1609728,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1613824,
+        "event_stop": 1622016,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1626112,
+        "event_stop": 1630208,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1634304,
+        "event_stop": 1642496,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 86016,
+        "event_start": 1646592,
+        "event_stop": 1732608,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 1736704,
+        "event_stop": 1757184,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1761280,
+        "event_stop": 1777664,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 1781760,
+        "event_stop": 1798144,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1806336,
+        "event_stop": 1810432,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 36864,
+        "event_start": 1814528,
+        "event_stop": 1851392,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1855488,
+        "event_stop": 1867776,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 53248,
+        "event_start": 1871872,
+        "event_stop": 1925120,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 1929216,
+        "event_stop": 1953792,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1957888,
+        "event_stop": 1966080,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1970176,
+        "event_stop": 1974272,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1982464,
+        "event_stop": 1994752,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 61440,
+        "event_start": 1998848,
+        "event_stop": 2060288,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2068480,
+        "event_stop": 2088960,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2101248,
+        "event_stop": 2113536,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 2117632,
+        "event_stop": 2142208,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2146304,
+        "event_stop": 2158592,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2162688,
+        "event_stop": 2174976,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2179072,
+        "event_stop": 2183168,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2187264,
+        "event_stop": 2191360,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2195456,
+        "event_stop": 2215936,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 32768,
+        "event_start": 2220032,
+        "event_stop": 2252800,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2256896,
+        "event_stop": 2273280,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2281472,
+        "event_stop": 2285568,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2293760,
+        "event_stop": 2301952,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 2306048,
+        "event_stop": 2330624,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 20480,
+        "event_start": 2334720,
+        "event_stop": 2355200,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2363392,
+        "event_stop": 2367488,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2375680,
+        "event_stop": 2387968,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2392064,
+        "event_stop": 2408448,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2412544,
+        "event_stop": 2428928,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2433024,
+        "event_stop": 2437120,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2441216,
+        "event_stop": 2449408,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2453504,
+        "event_stop": 2461696,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2465792,
+        "event_stop": 2469888,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 24576,
+        "event_start": 2473984,
+        "event_stop": 2498560,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2502656,
+        "event_stop": 2506752,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2510848,
+        "event_stop": 2514944,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2519040,
+        "event_stop": 2527232,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2531328,
+        "event_stop": 2535424,
+        "source_key": "Tl208",
+        "split": "train"
+      },
+      {
+        "event_count": 5527,
+        "event_start": 2543616,
+        "event_stop": 2549143,
+        "source_key": "Tl208",
+        "split": "train"
+      }
+    ],
+    "validation": [
+      {
+        "event_count": 4096,
+        "event_start": 4096,
+        "event_stop": 8192,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 40960,
+        "event_stop": 45056,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 69632,
+        "event_stop": 73728,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 126976,
+        "event_stop": 131072,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 172032,
+        "event_stop": 180224,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 233472,
+        "event_stop": 237568,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 258048,
+        "event_stop": 262144,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 266240,
+        "event_stop": 270336,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 282624,
+        "event_stop": 286720,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 290816,
+        "event_stop": 294912,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 303104,
+        "event_stop": 307200,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 311296,
+        "event_stop": 315392,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 405504,
+        "event_stop": 409600,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 430080,
+        "event_stop": 434176,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 475136,
+        "event_stop": 483328,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 499712,
+        "event_stop": 503808,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 512000,
+        "event_stop": 516096,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 528384,
+        "event_stop": 532480,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 643072,
+        "event_stop": 647168,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 655360,
+        "event_stop": 659456,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 684032,
+        "event_stop": 688128,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 724992,
+        "event_stop": 729088,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 765952,
+        "event_stop": 770048,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 851968,
+        "event_stop": 856064,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 868352,
+        "event_stop": 872448,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 913408,
+        "event_stop": 921600,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1093632,
+        "event_stop": 1097728,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1134592,
+        "event_stop": 1138688,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1187840,
+        "event_stop": 1191936,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1212416,
+        "event_stop": 1220608,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1265664,
+        "event_stop": 1269760,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1282048,
+        "event_stop": 1286144,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1298432,
+        "event_stop": 1302528,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1331200,
+        "event_stop": 1335296,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1429504,
+        "event_stop": 1433600,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1523712,
+        "event_stop": 1527808,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1630208,
+        "event_stop": 1634304,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1642496,
+        "event_stop": 1646592,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1716224,
+        "event_stop": 1720320,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1757184,
+        "event_stop": 1761280,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1794048,
+        "event_stop": 1798144,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1822720,
+        "event_stop": 1826816,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1863680,
+        "event_stop": 1867776,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1921024,
+        "event_stop": 1925120,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1982464,
+        "event_stop": 1986560,
+        "source_key": "0nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 16384,
+        "event_stop": 20480,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 28672,
+        "event_stop": 32768,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 57344,
+        "event_stop": 61440,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 90112,
+        "event_stop": 94208,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 401408,
+        "event_stop": 405504,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 417792,
+        "event_stop": 421888,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 507904,
+        "event_stop": 512000,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 557056,
+        "event_stop": 561152,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 610304,
+        "event_stop": 614400,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 675840,
+        "event_stop": 679936,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 741376,
+        "event_stop": 745472,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 786432,
+        "event_stop": 794624,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 843776,
+        "event_stop": 847872,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 864256,
+        "event_stop": 868352,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 888832,
+        "event_stop": 892928,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 933888,
+        "event_stop": 937984,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1019904,
+        "event_stop": 1028096,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1060864,
+        "event_stop": 1064960,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1073152,
+        "event_stop": 1077248,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1138688,
+        "event_stop": 1142784,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1183744,
+        "event_stop": 1187840,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1220608,
+        "event_stop": 1224704,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1257472,
+        "event_stop": 1261568,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1265664,
+        "event_stop": 1269760,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1306624,
+        "event_stop": 1314816,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1376256,
+        "event_stop": 1380352,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1396736,
+        "event_stop": 1400832,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1490944,
+        "event_stop": 1495040,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1564672,
+        "event_stop": 1568768,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1609728,
+        "event_stop": 1613824,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1617920,
+        "event_stop": 1622016,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1626112,
+        "event_stop": 1630208,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1650688,
+        "event_stop": 1654784,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1683456,
+        "event_stop": 1687552,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1699840,
+        "event_stop": 1708032,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1724416,
+        "event_stop": 1728512,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1822720,
+        "event_stop": 1830912,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1851392,
+        "event_stop": 1855488,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1863680,
+        "event_stop": 1871872,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1880064,
+        "event_stop": 1884160,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1921024,
+        "event_stop": 1929216,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1994752,
+        "event_stop": 2002944,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2039808,
+        "event_stop": 2048000,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 2088960,
+        "event_stop": 2105344,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2125824,
+        "event_stop": 2129920,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2203648,
+        "event_stop": 2207744,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2224128,
+        "event_stop": 2232320,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2236416,
+        "event_stop": 2240512,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2265088,
+        "event_stop": 2269184,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2375680,
+        "event_stop": 2379776,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2396160,
+        "event_stop": 2400256,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2478080,
+        "event_stop": 2482176,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2617344,
+        "event_stop": 2621440,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2629632,
+        "event_stop": 2633728,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2654208,
+        "event_stop": 2658304,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2686976,
+        "event_stop": 2691072,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2711552,
+        "event_stop": 2719744,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2834432,
+        "event_stop": 2838528,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2846720,
+        "event_stop": 2850816,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2908160,
+        "event_stop": 2912256,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2945024,
+        "event_stop": 2949120,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3014656,
+        "event_stop": 3018752,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3022848,
+        "event_stop": 3026944,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3031040,
+        "event_stop": 3035136,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 3203072,
+        "event_stop": 3207168,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 3220,
+        "event_start": 3280896,
+        "event_stop": 3284116,
+        "source_key": "2nubb",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 282624,
+        "event_stop": 286720,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 319488,
+        "event_stop": 323584,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 344064,
+        "event_stop": 348160,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 352256,
+        "event_stop": 356352,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 479232,
+        "event_stop": 483328,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 512000,
+        "event_stop": 516096,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 577536,
+        "event_stop": 581632,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 634880,
+        "event_stop": 638976,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 675840,
+        "event_stop": 679936,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 688128,
+        "event_stop": 692224,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 704512,
+        "event_stop": 708608,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 737280,
+        "event_stop": 741376,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 745472,
+        "event_stop": 749568,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 774144,
+        "event_stop": 778240,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 786432,
+        "event_stop": 794624,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 831488,
+        "event_stop": 835584,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 839680,
+        "event_stop": 843776,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 16384,
+        "event_start": 872448,
+        "event_stop": 888832,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 929792,
+        "event_stop": 933888,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1007616,
+        "event_stop": 1011712,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1015808,
+        "event_stop": 1019904,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1056768,
+        "event_stop": 1060864,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1093632,
+        "event_stop": 1097728,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1175552,
+        "event_stop": 1179648,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1187840,
+        "event_stop": 1191936,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1216512,
+        "event_stop": 1220608,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1232896,
+        "event_stop": 1241088,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1257472,
+        "event_stop": 1261568,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1269760,
+        "event_stop": 1273856,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1372160,
+        "event_stop": 1376256,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1413120,
+        "event_stop": 1417216,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1421312,
+        "event_stop": 1425408,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1433600,
+        "event_stop": 1437696,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1609728,
+        "event_stop": 1613824,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1630208,
+        "event_stop": 1634304,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1642496,
+        "event_stop": 1646592,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1679360,
+        "event_stop": 1683456,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1740800,
+        "event_stop": 1744896,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1781760,
+        "event_stop": 1785856,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1863680,
+        "event_stop": 1867776,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1880064,
+        "event_stop": 1884160,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 1921024,
+        "event_stop": 1933312,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1978368,
+        "event_stop": 1982464,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2076672,
+        "event_stop": 2080768,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2101248,
+        "event_stop": 2105344,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2134016,
+        "event_stop": 2138112,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2150400,
+        "event_stop": 2154496,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2162688,
+        "event_stop": 2166784,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2170880,
+        "event_stop": 2174976,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2248704,
+        "event_stop": 2252800,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2269184,
+        "event_stop": 2273280,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2289664,
+        "event_stop": 2293760,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2330624,
+        "event_stop": 2334720,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2338816,
+        "event_stop": 2342912,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2416640,
+        "event_stop": 2420736,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2473984,
+        "event_stop": 2478080,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2490368,
+        "event_stop": 2494464,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2625536,
+        "event_stop": 2629632,
+        "source_key": "Bi214",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 12288,
+        "event_stop": 16384,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 90112,
+        "event_stop": 94208,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 118784,
+        "event_stop": 122880,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 147456,
+        "event_stop": 151552,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 176128,
+        "event_stop": 180224,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 196608,
+        "event_stop": 200704,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 221184,
+        "event_stop": 229376,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 241664,
+        "event_stop": 245760,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 303104,
+        "event_stop": 307200,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 319488,
+        "event_stop": 323584,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 352256,
+        "event_stop": 356352,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 360448,
+        "event_stop": 364544,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 372736,
+        "event_stop": 376832,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 389120,
+        "event_stop": 393216,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 634880,
+        "event_stop": 638976,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 647168,
+        "event_stop": 651264,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 655360,
+        "event_stop": 659456,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 704512,
+        "event_stop": 708608,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 782336,
+        "event_stop": 786432,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 897024,
+        "event_stop": 901120,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 946176,
+        "event_stop": 950272,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1015808,
+        "event_stop": 1019904,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1081344,
+        "event_stop": 1085440,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1110016,
+        "event_stop": 1114112,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1118208,
+        "event_stop": 1122304,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1216512,
+        "event_stop": 1220608,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1306624,
+        "event_stop": 1310720,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1343488,
+        "event_stop": 1347584,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 1454080,
+        "event_stop": 1462272,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1482752,
+        "event_stop": 1486848,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1597440,
+        "event_stop": 1601536,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1609728,
+        "event_stop": 1613824,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1630208,
+        "event_stop": 1634304,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1732608,
+        "event_stop": 1736704,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1757184,
+        "event_stop": 1761280,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1777664,
+        "event_stop": 1781760,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1810432,
+        "event_stop": 1814528,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1851392,
+        "event_stop": 1855488,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1867776,
+        "event_stop": 1871872,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1978368,
+        "event_stop": 1982464,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 1994752,
+        "event_stop": 1998848,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2060288,
+        "event_stop": 2064384,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 12288,
+        "event_start": 2088960,
+        "event_stop": 2101248,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2113536,
+        "event_stop": 2117632,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2142208,
+        "event_stop": 2146304,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2158592,
+        "event_stop": 2162688,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2174976,
+        "event_stop": 2179072,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2183168,
+        "event_stop": 2187264,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2215936,
+        "event_stop": 2220032,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2273280,
+        "event_stop": 2277376,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2285568,
+        "event_stop": 2289664,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2359296,
+        "event_stop": 2363392,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2367488,
+        "event_stop": 2371584,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2408448,
+        "event_stop": 2412544,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2437120,
+        "event_stop": 2441216,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 4096,
+        "event_start": 2449408,
+        "event_stop": 2453504,
+        "source_key": "Tl208",
+        "split": "validation"
+      },
+      {
+        "event_count": 8192,
+        "event_start": 2535424,
+        "event_stop": 2543616,
+        "source_key": "Tl208",
+        "split": "validation"
+      }
+    ]
+  }
+}

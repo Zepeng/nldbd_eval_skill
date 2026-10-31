@@ -1,0 +1,68 @@
+{
+  "dataset": "exo200",
+  "n_events": 140383,
+  "n_nonfinite": 0,
+  "lines": {
+    "Tl208_2615": {
+      "line_keV": 2614.511,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 2615.47737159629,
+      "fwhm_raw_keV": 151.93465967040902,
+      "fwhm_raw_err_keV": 1.6888458759910985,
+      "signal": 23669.6396988392,
+      "chi2_ndf": 2.063108602275948,
+      "window_keV": [
+        2290.763961644234,
+        2934.7464659263005
+      ],
+      "n_bins": 40,
+      "iterations": 2,
+      "converged": true,
+      "neighbours_keV": [],
+      "params": {
+        "N": 23669.6396988392,
+        "mu": 2615.47737159629,
+        "sig": 62.03728745386521,
+        "f_tail": 0.44137484101440594,
+        "tau": 4.215766035867632,
+        "f_high": 0.44999999999995616,
+        "tau_high": 22.625733445474026,
+        "h_step": 4.772403609576195,
+        "b0": 13.416608486361676,
+        "b1": -0.03478080524272825
+      },
+      "sideband_width_keV": 516.1656747096771,
+      "sidebands": {
+        "low": 15729,
+        "high": 1937
+      },
+      "residual_fwhm_keV": 155.95224411126074,
+      "local_gain": 0.9062578167307458,
+      "fwhm_keV": 167.65059221061554,
+      "fwhm_err_keV": 1.8635379963766578,
+      "fwhm_rel": 0.06412311602843344,
+      "role": "headline"
+    }
+  },
+  "relative_residual_sigma": 0.03585054669764057,
+  "headline": {
+    "name": "sigma/E at 2614.5 keV",
+    "value": 0.02723058017267331,
+    "err": 0.00030268441134647186,
+    "reportable": true,
+    "reasons": []
+  },
+  "benchmark": "nldbd-energy-resolution 1.0.0-dev",
+  "split": "test",
+  "model": "paper_region_mlp__scratch",
+  "predictions": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/exo200/L1.0/s42/predictions.npz",
+  "predictions_sha256": "0d2d4736c89ed43159614c3cb191753436e509d97c0493ec2261d9ba2202e36a",
+  "integrity": {
+    "ids_match_split": true,
+    "training_ids": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/exo200/L1.0/s42/training_ids.npz",
+    "n_training_ids": 342632,
+    "overlap_with_split": 0
+  },
+  "evaluated_utc": "2026-10-25T17:57:09+00:00"
+}

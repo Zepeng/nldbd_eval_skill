@@ -1,0 +1,174 @@
+{
+  "name": "nldbd-energy-resolution",
+  "version": "1.0.0-dev",
+  "description": "Energy-regression extension of the NLDBD packet: a model predicts each event's energy from the detector inputs; scored by physics resolution of the predicted spectrum (peak FWHM), not MSE. Uses the frozen splits and labeled subsets of nldbd-energy-matched-auc v1.2, imported read-only.",
+  "classification_packet": "nldbd-energy-matched-auc v1.2 (validation/), never modified",
+  "label_regimes": {
+    "fractions": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "subset": "validation.freeze_splits.labeled_subset_positions over the regression train table, seed of benchmark.json label_regimes"
+  },
+  "th228_lines_keV": [
+    238.632,
+    240.986,
+    277.371,
+    300.087,
+    510.77,
+    583.191,
+    727.33,
+    763.13,
+    785.37,
+    860.564,
+    893.408,
+    1078.62,
+    1512.7,
+    1592.53,
+    1620.5,
+    2103.53,
+    2614.511
+  ],
+  "gates": {
+    "min_signal_events": 300,
+    "max_chi2_ndf": 3.0,
+    "max_centroid_offset_fwhm": 3.0,
+    "min_window_half_width_sigma": 4.0,
+    "max_local_gain_deviation": 0.2,
+    "local_gain_note": "the FWHM is divided by the local gain (slope of E_pred vs E_ref on events whose REFERENCE energy lies in sidebands line +-[4 s, 4 s + w], s = max(sigma_ref, sigma_pred), w = 8 s, widened up to 12 s until each band holds >= 200 events (>= 50 required), two low bands when the spectrum ends above the line); a gain outside 1 +- 0.2 makes the line not reportable (widened from 0.1 on 2026-10-25, user: the FWHM is already divided by the gain, so moderate shrinkage is corrected; EXO-200 regressors at 1 %/10 % labels sit at 0.85-0.90). Guards against a regressor that narrows a peak by compressing the energy scale around it."
+  },
+  "datasets": {
+    "mjd": {
+      "target": "energy_label (collaboration calibrated energy, keV)",
+      "inputs": "classification view (raw_waveform, baseline-subtracted, max-normalised) + log(scale) + detector index",
+      "peak_model": "gauss_tail_step",
+      "detectors": [
+        112,
+        113,
+        114,
+        122,
+        123,
+        132,
+        133,
+        134,
+        152,
+        153,
+        161,
+        163,
+        164,
+        172,
+        173,
+        174,
+        212,
+        213,
+        214,
+        231,
+        232,
+        253,
+        254,
+        261,
+        262,
+        273
+      ],
+      "lines": [
+        {
+          "name": "Pb212_238",
+          "keV": 238.632,
+          "sigma_ref_keV": 0.33,
+          "role": "curve"
+        },
+        {
+          "name": "Tl208_583",
+          "keV": 583.191,
+          "sigma_ref_keV": 0.51,
+          "role": "curve"
+        },
+        {
+          "name": "Bi212_727",
+          "keV": 727.33,
+          "sigma_ref_keV": 0.55,
+          "role": "curve"
+        },
+        {
+          "name": "Tl208_861",
+          "keV": 860.564,
+          "sigma_ref_keV": 0.62,
+          "role": "curve"
+        },
+        {
+          "name": "Tl208_DEP_1593",
+          "keV": 1592.53,
+          "sigma_ref_keV": 0.98,
+          "role": "curve"
+        },
+        {
+          "name": "Bi212_1621",
+          "keV": 1620.5,
+          "sigma_ref_keV": 0.99,
+          "role": "curve"
+        },
+        {
+          "name": "Tl208_SEP_2104",
+          "keV": 2103.53,
+          "sigma_ref_keV": 1.37,
+          "role": "secondary"
+        },
+        {
+          "name": "Tl208_2615",
+          "keV": 2614.511,
+          "sigma_ref_keV": 1.23,
+          "role": "curve"
+        }
+      ],
+      "headline": "FWHM at Q_bb(76Ge) = 2039.06 keV from FWHM(E) = sqrt(a + b E + c E^2) (a, b, c >= 0) fitted through the reportable curve lines (needs >= 4, at least one above 1.5 MeV: DEP 1592.5, 1620.5 or 2614.5; Q_bb lies between DEP and SEP). 2614.5 is optional: the spectrum ends just above it and regressors' predictions are often cut off there (user 2026-10-25). Secondary, reported directly: FWHM at the DEP 1592.5 (not Doppler-broadened), the SEP 2103.5 (closest line to Q_bb; Doppler-broadened, the same for every model, never in the curve) and 2614.5",
+      "q_bb_keV": 2039.06,
+      "window_sigma": 8.0,
+      "min_window_keV": 6.0
+    },
+    "exo200": {
+      "target": "Rotated_energy (charge + scintillation, keV)",
+      "inputs": "classification view (226 x 300 waveforms, baseline-subtracted, max-normalised) + log(scale)",
+      "peak_model": "gauss_tail_step",
+      "lines": [
+        {
+          "name": "Tl208_2615",
+          "keV": 2614.511,
+          "sigma_ref_keV": 33.8,
+          "role": "headline"
+        }
+      ],
+      "headline": "sigma/E at 2614.5 keV (closest clean line to Q_bb(136Xe) = 2457.8 keV; the spectrum starts at the 512 keV threshold)",
+      "q_bb_keV": 2457.83,
+      "window_sigma": 5.0,
+      "min_window_keV": 0.0,
+      "peak_model_note": "the Rotated_energy 2614.5 peak has a low-energy tail: Gauss + tail + step fits the reference with chi2/ndf 1.5 (Gauss + step 3.1); the +-5 sigma window keeps the 2382 keV Compton edge out; FWHM 79.0 keV stable for 4-6 sigma windows"
+    },
+    "supernemo": {
+      "target": "E1 + E2 (calorimeter, keV)",
+      "inputs": "classification view (tracker hits tX tY tZ tR only); calorimeter energies are never inputs",
+      "sources": {
+        "train": [
+          "0nubb"
+        ],
+        "validation": [
+          "0nubb"
+        ],
+        "test": [
+          "0nubb",
+          "2nubb",
+          "Bi214"
+        ]
+      },
+      "peak_model": "nonparametric",
+      "headline": "FWHM of the residual E_pred - E_ref over the 0nubb test events (2.3548 x 1.4826 x MAD, keV); the trivial floor (constant prediction) is reported beside it; secondary: half-maximum FWHM of the predicted 0nubb spectrum",
+      "q_bb_keV": 2997.9,
+      "sources_note": "training and selection on 0nubb only (user 2026-10-25): training on the 2nubb/Bi214 continua made the 0nubb residual grow with more labels (Region+MLP 533/688/1343 keV at 1/10/100 %)"
+    }
+  },
+  "peak_models": {
+    "gauss": "Gaussian + linear background",
+    "gauss_step": "Gaussian + erfc step + linear background",
+    "gauss_tail_step": "(1 - f - f_h) Gaussian + f low-energy and f_h high-energy Gaussian-convolved exponential tails + erfc step + linear background (HPGe shape with a high-side tail for model predictions); FWHM = half-maximum width of the full signal shape"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "dataset": "supernemo",
+  "benchmark_version": "1.1",
+  "generated_utc": "2026-10-23T04:11:00+00:00",
+  "data_root": "/home/klz/Data/zeronu_benchmark/SuperNEMO",
+  "reader": "SuperNEMOReader",
+  "label_convention": "1 = signal-like = evaluation-positive class",
+  "signal_group": "2nu",
+  "background_group": "Bi214",
+  "profile": "strict600",
+  "protocol_sha256": "a46d4226b355c497ba410ec1258dfa3e13fbace114d18986a12dc027e5a7ee7c",
+  "splits": {
+    "train": {
+      "n": 4735250,
+      "label_counts": {
+        "0": 2105618,
+        "1": 2629632
+      },
+      "group_counts": {
+        "2nu": 2629632,
+        "Bi214": 2105618
+      },
+      "ids_sha256_sorted": "af96b2eb9a3f18bac8a5f6e57b042cd3602e25d50834dcc64c90b602b064fc51",
+      "ids_sha256_canonical_order": "b21bc68a8b8425e676fdebd64c51ae36b6055017c5bef697ae50e08e6ea2f5cd",
+      "labels_sha256_canonical_order": "64216d9456e315e54babbf11d643a2b4bd6cfbc7ed04ab40df9e15bb1fb7af79",
+      "energy_keV": {
+        "min": 300.0,
+        "max": 3181.75,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 260,
+        "sha256_repr": "48c2a4248b9827dd365ebf119eabbabddf966322eba46c5528d9efdafd450433"
+      },
+      "seconds_to_read": 15.6
+    },
+    "validation": {
+      "n": 593044,
+      "label_counts": {
+        "0": 266240,
+        "1": 326804
+      },
+      "group_counts": {
+        "2nu": 326804,
+        "Bi214": 266240
+      },
+      "ids_sha256_sorted": "da8b180ed0258bd6cf76a4c8763bc50319ce09deaec30bb13950da8c8b5a6c37",
+      "ids_sha256_canonical_order": "24c3cc7354af36ca6a5dbb62b7e7b7351b9c054159a2e09640a8df2bbfe45c88",
+      "labels_sha256_canonical_order": "3621585169ec275790617ebc2aa38c67b5eee55b86a07e8f8aace6918c846cdf",
+      "energy_keV": {
+        "min": 300.0,
+        "max": 3111.75,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 38,
+        "sha256_repr": "d702e89c8e742f1aed3b8d2a490113a60ce8c377ea5d24884c7c755c90ed6e4a"
+      },
+      "seconds_to_read": 1.5
+    },
+    "test": {
+      "n": 589824,
+      "label_counts": {
+        "0": 262144,
+        "1": 327680
+      },
+      "group_counts": {
+        "2nu": 327680,
+        "Bi214": 262144
+      },
+      "ids_sha256_sorted": "a8de5903bf4fb960cc4caab3fe3d4ade362aecb57621644720d5b338f3ab35c3",
+      "ids_sha256_canonical_order": "2353a6e80bbfac9ce50ef78f80dff0cbfa2392832a14dc8246bc89659a22f8a5",
+      "labels_sha256_canonical_order": "620ccb64919d27d07b0be099850d5549ec57211855842fadd4b89051e746aa8f",
+      "energy_keV": {
+        "min": 300.046875,
+        "max": 3108.75,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 40,
+        "sha256_repr": "5cd2d5ca85c987d53735340d572089f68e211b1de4999719ee75e2fdd3edc824"
+      },
+      "seconds_to_read": 1.5
+    }
+  },
+  "label_regimes": {
+    "seed": 42,
+    "rule": "np.random.default_rng(seed).permutation(n_train)[:round(fraction*n_train)], positions into the canonical train order; subsets are nested",
+    "fractions": {
+      "0.01": {
+        "n": 47352,
+        "ids_sha256_sorted": "24cc7f9af3577865f44a4151db4479838441929f44c55c936b7a77a05e8afe77",
+        "label_counts": {
+          "0": 21040,
+          "1": 26312
+        }
+      },
+      "0.1": {
+        "n": 473525,
+        "ids_sha256_sorted": "f9d35af3bc62a071eb93c732e43e7db48b64d87acc512502ec10e464c285e7d9",
+        "label_counts": {
+          "0": 210524,
+          "1": 263001
+        }
+      },
+      "1.0": {
+        "n": 4735250,
+        "ids_sha256_sorted": "af96b2eb9a3f18bac8a5f6e57b042cd3602e25d50834dcc64c90b602b064fc51",
+        "label_counts": {
+          "0": 2105618,
+          "1": 2629632
+        }
+      }
+    }
+  },
+  "energy_only_floor_test": {
+    "plus_energy": {
+      "inclusive_auc": 0.3484844572201837,
+      "matched_auc": 0.49999973232934214,
+      "matching_status": "ok",
+      "common_support_keV": [
+        350.20625,
+        2218.25
+      ],
+      "valid_bins": 374,
+      "coverage": [
+        0.8987960815429688,
+        0.9900054931640625
+      ]
+    },
+    "minus_energy": {
+      "inclusive_auc": 0.6515155427798163,
+      "matched_auc": 0.5000002676707461,
+      "matching_status": "ok",
+      "common_support_keV": [
+        350.20625,
+        2218.25
+      ],
+      "valid_bins": 374,
+      "coverage": [
+        0.8987960815429688,
+        0.9900054931640625
+      ]
+    }
+  },
+  "coarse": {
+    "split": "validation",
+    "seed": 7,
+    "fraction": 0.05,
+    "n": 29652,
+    "rule": "np.random.default_rng(seed).permutation(n_validation)[:round(fraction*n_validation)], positions into the canonical validation order; smallest candidate fraction with an estimable matched AUC and per-class coverage >= 0.5 x the full validation split's coverage",
+    "candidate_fractions": [
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "coverage_ratio_required": 0.5,
+    "minimum_fraction_for_this_dataset": 0.0,
+    "candidates": {
+      "0.005": {
+        "n": 2965,
+        "matching_status": "not_estimable_no_eligible_bins",
+        "valid_bins": 0,
+        "coverage": [
+          0.0,
+          0.0
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.0,
+          0.0
+        ]
+      },
+      "0.01": {
+        "n": 5930,
+        "matching_status": "not_estimable_no_eligible_bins",
+        "valid_bins": 0,
+        "coverage": [
+          0.0,
+          0.0
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.0,
+          0.0
+        ]
+      },
+      "0.02": {
+        "n": 11861,
+        "matching_status": "not_estimable_low_coverage",
+        "valid_bins": 15,
+        "coverage": [
+          0.05942814427209867,
+          0.058832565284178184
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.06614527882594931,
+          0.05942829574296681
+        ]
+      },
+      "0.05": {
+        "n": 29652,
+        "matching_status": "ok",
+        "valid_bins": 270,
+        "coverage": [
+          0.7132605770668261,
+          0.9008848469952071
+        ],
+        "coverage_ratio_to_full_validation": [
+          0.7938800769148874,
+          0.9100070829647562
+        ]
+      }
+    },
+    "full_validation_floor": {
+      "inclusive_auc": 0.3492854166421786,
+      "matched_auc": 0.49999535035352083,
+      "matching_status": "ok",
+      "common_support_keV": [
+        349.68875,
+        2217.935
+      ],
+      "valid_bins": 374,
+      "coverage": [
+        0.8984487680288461,
+        0.9899756428929879
+      ]
+    },
+    "label_counts": {
+      "0": 13378,
+      "1": 16274
+    },
+    "ids_sha256_sorted": "2134fbcd5b1c3befa4be639fde4d21224d862829f0682151c7a773f0813b75ae",
+    "energy_only_floor": {
+      "plus_energy": {
+        "inclusive_auc": 0.347194914426373,
+        "matched_auc": 0.4999972692553477,
+        "matching_status": "ok",
+        "common_support_keV": [
+          354.8121875,
+          2236.1025
+        ],
+        "valid_bins": 270,
+        "coverage": [
+          0.7132605770668261,
+          0.9008848469952071
+        ]
+      },
+      "minus_energy": {
+        "inclusive_auc": 0.6528050855736269,
+        "matched_auc": 0.5000027307447178,
+        "matching_status": "ok",
+        "common_support_keV": [
+          354.8121875,
+          2236.1025
+        ],
+        "valid_bins": 270,
+        "coverage": [
+          0.7132605770668261,
+          0.9008848469952071
+        ]
+      }
+    }
+  },
+  "ids_npz": "supernemo_ids.npz"
+}

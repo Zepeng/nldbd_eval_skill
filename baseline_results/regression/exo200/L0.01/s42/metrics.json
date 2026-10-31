@@ -1,0 +1,71 @@
+{
+  "dataset": "exo200",
+  "n_events": 140383,
+  "n_nonfinite": 0,
+  "lines": {
+    "Tl208_2615": {
+      "line_keV": 2614.511,
+      "reportable": true,
+      "reasons": [],
+      "centroid_keV": 2663.163197170371,
+      "fwhm_raw_keV": 308.52100955037486,
+      "fwhm_raw_err_keV": 12.36169125808293,
+      "signal": 37134.18295224976,
+      "chi2_ndf": 0.9391694982485628,
+      "window_keV": [
+        1964.72168093658,
+        3264.30031906342
+      ],
+      "n_bins": 40,
+      "iterations": 1,
+      "converged": true,
+      "neighbours_keV": [
+        2103.53
+      ],
+      "params": {
+        "N": 37134.18295224976,
+        "mu": 2663.163197170371,
+        "sig": 103.1235665982243,
+        "f_tail": 0.24881549239163872,
+        "tau": 102.71123930866443,
+        "f_high": 0.44999999999999996,
+        "tau_high": 441.1011671147114,
+        "h_step": 51.442212078343466,
+        "b0": -18.332762240712654,
+        "b1": 0.014570175898085166,
+        "A0": 2884.0975455619205
+      },
+      "sideband_width_keV": 1048.134477032006,
+      "sidebands": {
+        "low": 35086,
+        "high": 759
+      },
+      "residual_fwhm_keV": 295.4957300064322,
+      "local_gain": 0.8518840244405634,
+      "fwhm_keV": 362.16315918470497,
+      "fwhm_err_keV": 14.511002558359884,
+      "fwhm_rel": 0.13852041899410825,
+      "role": "headline"
+    }
+  },
+  "relative_residual_sigma": 0.08198312976964185,
+  "headline": {
+    "name": "sigma/E at 2614.5 keV",
+    "value": 0.05882420581836336,
+    "err": 0.002356943768232428,
+    "reportable": true,
+    "reasons": []
+  },
+  "benchmark": "nldbd-energy-resolution 1.0.0-dev",
+  "split": "test",
+  "model": "paper_region_mlp__scratch",
+  "predictions": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/exo200/L0.01/s42/predictions.npz",
+  "predictions_sha256": "f97cd00c8fdd968070b6e69f0246574bb5eb2374388fe98f1fffb0fbed82a3d4",
+  "integrity": {
+    "ids_match_split": true,
+    "training_ids": "/home/tidmad/foundation_model/runs_regression/paper_region_mlp__scratch/exo200/L0.01/s42/training_ids.npz",
+    "n_training_ids": 9366,
+    "overlap_with_split": 0
+  },
+  "evaluated_utc": "2026-10-25T17:57:09+00:00"
+}

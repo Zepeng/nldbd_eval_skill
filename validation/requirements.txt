@@ -1,0 +1,5 @@
+# Evaluation harness: NumPy-only evaluator + HDF5 readers. Python >= 3.11.
+numpy>=1.26
+h5py>=3.10
+# Only the example models need torch; install a build matching your CUDA driver, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128

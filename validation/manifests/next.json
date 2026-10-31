@@ -1,0 +1,227 @@
+{
+  "dataset": "next",
+  "benchmark_version": "1.1",
+  "generated_utc": "2026-10-23T04:11:00+00:00",
+  "data_root": "/home/klz/Data/zeronu_benchmark/NEXT",
+  "reader": "NEXTReader",
+  "label_convention": "1 = signal-like = evaluation-positive class",
+  "signal_group": "0nubb",
+  "background_group": "Bi214",
+  "profile": "strict600",
+  "protocol_sha256": "a46d4226b355c497ba410ec1258dfa3e13fbace114d18986a12dc027e5a7ee7c",
+  "splits": {
+    "train": {
+      "n": 932391,
+      "label_counts": {
+        "0": 413357,
+        "1": 519034
+      },
+      "group_counts": {
+        "0nubb": 519034,
+        "Bi214": 413357
+      },
+      "ids_sha256_sorted": "b1df133d752970c23486f85f301b662ee76403723c4bfadec6f3cee193afd434",
+      "ids_sha256_canonical_order": "d2916f338f965ccfebe9d8e209a5d5bda0caf81264b49bdc20b2c1429e5ae54a",
+      "labels_sha256_canonical_order": "eed2a413e4472836aeb924df9bd91d64d840a350626e918b561cd234db2ca8c4",
+      "energy_keV": {
+        "min": 2433.003960788483,
+        "max": 2482.529640197754,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 0,
+        "sha256_repr": "e7ba5f9e407ea6b1f6d44d3f753e0819a42925c5019538d4423be7a9481066e6"
+      },
+      "seconds_to_read": 4.3
+    },
+    "validation": {
+      "n": 116549,
+      "label_counts": {
+        "0": 51669,
+        "1": 64880
+      },
+      "group_counts": {
+        "0nubb": 64880,
+        "Bi214": 51669
+      },
+      "ids_sha256_sorted": "7bedb22ae09c6e9fd07e1af9b9a983ef52e81e41f7de890193bb86d262699f1e",
+      "ids_sha256_canonical_order": "14c08f85c2cf673884c15993ee0618bffcd567859f95a93b45e4ebe39a7392dc",
+      "labels_sha256_canonical_order": "1ab5ec0e4232efa38bd6c8341a52689639ba011d3445a2e868b4a8f39b419666",
+      "energy_keV": {
+        "min": 2433.103162838961,
+        "max": 2482.5295695773093,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 0,
+        "sha256_repr": "001ed1dfcfd06a7075531d664799c27dd65f4e0be9ab84df44d71cecd9d04b46"
+      },
+      "seconds_to_read": 0.6
+    },
+    "test": {
+      "n": 116549,
+      "label_counts": {
+        "0": 51670,
+        "1": 64879
+      },
+      "group_counts": {
+        "0nubb": 64879,
+        "Bi214": 51670
+      },
+      "ids_sha256_sorted": "524e77f51ed28a2836f378cb9676afbfb4da8c2254cfc03739c5c0d15384f125",
+      "ids_sha256_canonical_order": "bcd4b5973d2cdd7363654ac8bd531341981397883cdb45f39eb80f496c429415",
+      "labels_sha256_canonical_order": "1203fc372b85cad5bab5ea7e864bf33f7db2dec011e08f2a4d7c9df10ad5524e",
+      "energy_keV": {
+        "min": 2433.2023653696524,
+        "max": 2482.529569475446,
+        "n_nonfinite": 0,
+        "n_below_0": 0,
+        "n_above_3000": 0,
+        "sha256_repr": "606bccecf38149312ae44a084ef77ef311840121e39b12ce2fd71e27fc20cf86"
+      },
+      "seconds_to_read": 0.4
+    }
+  },
+  "label_regimes": {
+    "seed": 42,
+    "rule": "np.random.default_rng(seed).permutation(n_train)[:round(fraction*n_train)], positions into the canonical train order; subsets are nested",
+    "fractions": {
+      "0.01": {
+        "n": 9324,
+        "ids_sha256_sorted": "9573ac37c0c81ba6e0e00a8dc7a7c4bf41e16e5b99c9e7897f38b3be6587b203",
+        "label_counts": {
+          "0": 4043,
+          "1": 5281
+        }
+      },
+      "0.1": {
+        "n": 93239,
+        "ids_sha256_sorted": "2d1c40676abd08db46cfd356c78d68df8694cf6a3f5efe52eaeb1b928853561d",
+        "label_counts": {
+          "0": 41310,
+          "1": 51929
+        }
+      },
+      "1.0": {
+        "n": 932391,
+        "ids_sha256_sorted": "b1df133d752970c23486f85f301b662ee76403723c4bfadec6f3cee193afd434",
+        "label_counts": {
+          "0": 413357,
+          "1": 519034
+        }
+      }
+    }
+  },
+  "energy_only_floor_test": {
+    "plus_energy": {
+      "inclusive_auc": 0.7129661780986155,
+      "matched_auc": 0.5063537167822754,
+      "matching_status": "ok",
+      "common_support_keV": [
+        2434.839165949452,
+        2480.35090446283
+      ],
+      "valid_bins": 11,
+      "coverage": [
+        0.9700019353590091,
+        0.9881779928790517
+      ]
+    },
+    "minus_energy": {
+      "inclusive_auc": 0.28703382190138454,
+      "matched_auc": 0.4936462832180545,
+      "matching_status": "ok",
+      "common_support_keV": [
+        2434.839165949452,
+        2480.35090446283
+      ],
+      "valid_bins": 11,
+      "coverage": [
+        0.9700019353590091,
+        0.9881779928790517
+      ]
+    }
+  },
+  "coarse": {
+    "split": "validation",
+    "seed": 7,
+    "fraction": 0.1,
+    "n": 11655,
+    "rule": "np.random.default_rng(seed).permutation(n_validation)[:round(fraction*n_validation)], positions into the canonical validation order; smallest candidate fraction with an estimable matched AUC and per-class coverage >= 0.5 x the full validation split's coverage",
+    "candidate_fractions": [
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "coverage_ratio_required": 0.5,
+    "minimum_fraction_for_this_dataset": 0.1,
+    "candidates": {
+      "0.1": {
+        "n": 11655,
+        "matching_status": "ok",
+        "valid_bins": 9,
+        "coverage": [
+          0.9657285085200077,
+          0.9841417910447762
+        ],
+        "coverage_ratio_to_full_validation": [
+          1.000726531360962,
+          0.9977360991778405
+        ]
+      }
+    },
+    "full_validation_floor": {
+      "inclusive_auc": 0.7100162874888503,
+      "matched_auc": 0.5054875059455864,
+      "matching_status": "ok",
+      "common_support_keV": [
+        2434.9358790306724,
+        2480.1735616607766
+      ],
+      "valid_bins": 9,
+      "coverage": [
+        0.9650273858599934,
+        0.9863748458692971
+      ]
+    },
+    "label_counts": {
+      "0": 5223,
+      "1": 6432
+    },
+    "ids_sha256_sorted": "cc9f99fbccd904d9f88a2480ddc6190bd1ae2cb2ebffcf19894b41b2618829b5",
+    "energy_only_floor": {
+      "plus_energy": {
+        "inclusive_auc": 0.7019636137472698,
+        "matched_auc": 0.5052811473060232,
+        "matching_status": "ok",
+        "common_support_keV": [
+          2434.7315352084115,
+          2479.7863111356855
+        ],
+        "valid_bins": 9,
+        "coverage": [
+          0.9657285085200077,
+          0.9841417910447762
+        ]
+      },
+      "minus_energy": {
+        "inclusive_auc": 0.2980363862527302,
+        "matched_auc": 0.49471885269398824,
+        "matching_status": "ok",
+        "common_support_keV": [
+          2434.7315352084115,
+          2479.7863111356855
+        ],
+        "valid_bins": 9,
+        "coverage": [
+          0.9657285085200077,
+          0.9841417910447762
+        ]
+      }
+    }
+  },
+  "ids_npz": "next_ids.npz"
+}
