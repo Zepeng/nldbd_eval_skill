@@ -1,6 +1,6 @@
 {
   "dataset": "next",
-  "benchmark_version": "1.1",
+  "benchmark_version": "1.2",
   "generated_utc": "2026-10-23T04:11:00+00:00",
   "data_root": "/home/klz/Data/zeronu_benchmark/NEXT",
   "reader": "NEXTReader",

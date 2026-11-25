@@ -5,7 +5,7 @@ one HDF5 file per dataset under ``NLDBD_CACHE_DIR`` (default ``<project>/cache``
 the manifest's coarse identity hash, so a regenerated manifest invalidates it automatically. It is
 a performance device only: never ship it, never read labels or energies from it (it has none).
 
-Formats: MJD float32 [n, 1, 3800] (preprocessed); EXO-200 int16 [n, 226, 300] raw waveforms
+Formats: MJD float32 [n, 1, 3800] (preprocessed); EXO-200 int16 [n, 226, 600] raw waveforms
 (preprocessing is applied on load, exactly as the reader does); NEXT and SuperNEMO ragged hits as
 float32 [total_hits, 4] with int64 offsets.
 """
@@ -65,20 +65,17 @@ def build(dataset: str, reader, table, positions, batch_size=256) -> Path:
                 idx = np.array([where[p] for p in pos]); order = np.argsort(idx)
                 ds[idx[order]] = x[order]
         elif dataset == "exo200":
-            ds = f.create_dataset("inputs_int16", shape=(len(positions), 226, 300), dtype=np.int16, chunks=(16, 226, 300))
+            ds = f.create_dataset("inputs_int16", shape=(len(positions), 226, 600), dtype=np.int16, chunks=(16, 226, 600))
             # raw int16, read through the reader's own file/row locators to stay exact
-            files = reader.files
             order = np.lexsort((table["row"][positions], table["file_index"][positions]))
             pos_sorted = positions[order]
             for k in np.unique(table["file_index"][pos_sorted]):
                 here = pos_sorted[table["file_index"][pos_sorted] == k]
-                with h5py.File(files[k], "r") as g:
-                    wf = g["Waveforms"]
-                    for start in range(0, len(here), batch_size):
-                        chunk = here[start:start + batch_size]
-                        raw = np.stack([wf[str(r)][()] for r in table["row"][chunk]]).astype(np.int16)
-                        idx = np.array([where[p] for p in chunk]); o = np.argsort(idx)
-                        ds[idx[o]] = raw[o]
+                for start in range(0, len(here), batch_size):
+                    chunk = here[start:start + batch_size]
+                    raw = reader.read_raw(int(k), table["row"][chunk]).astype(np.int16)
+                    idx = np.array([where[p] for p in chunk]); o = np.argsort(idx)
+                    ds[idx[o]] = raw[o]
         else:
             hits, offsets, sizes = [], [0], np.zeros(len(positions), dtype=np.int64)
             per_event = [None] * len(positions)

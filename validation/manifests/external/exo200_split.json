@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "dataset": "EXO-200 Open Source Data Release for AI/ML Applications",
+  "dataset_version": "v3",
+  "dataset_doi": "10.5281/zenodo.20419164",
+  "supersedes": "release v1 (29 shards <run>-<part>.h5, 300-sample windows that cut signals off, 515,002 events), which this benchmark no longer reads",
+  "waveform": {
+    "channels": 226,
+    "samples": 600,
+    "window_us": 600,
+    "pre_trigger_us": 200,
+    "dtype": "int16",
+    "layout": "one file per run: Waveforms (N, 226, 600), plus Event_Number, Charge_Cluster_Number, Rotated_Energy, ..."
+  },
+  "expected_hdf5_files": 15,
+  "expected_files": [
+    "8956.h5", "8957.h5",
+    "8958.h5", "8967.h5",
+    "8968.h5", "8969.h5",
+    "8970.h5", "8971.h5",
+    "8972.h5", "8999.h5",
+    "9000.h5", "9001.h5",
+    "9008.h5", "9009.h5",
+    "9010.h5"
+  ],
+  "expected_events_in_files": 976344,
+  "expected_events": 960901,
+  "blacklist": {
+    "file": "exo200_event_blacklist.csv",
+    "sha256": "7fc104ebb4fb806d0d784237627b4406d5e03cf2b564bb49fe46b04f1c5dd7af",
+    "rows": 15443,
+    "key": ["run", "event_number"],
+    "action": "events listed are removed from every split (train, validation and test)",
+    "reason": "events with incorrect labels (data-owner addendum); the CSV 'reason' column reads multiple_reconstructed_scintillation_clusters",
+    "note": "the 'split' column of the CSV belongs to an earlier project's split and is not used"
+  },
+  "seed": 42,
+  "split_method": "run-grouped; run assignment carried over unchanged from the split definition of release v1",
+  "preprocessing": {
+    "baseline_samples": 200,
+    "classification_amplitude_normalization": true
+  },
+  "label_definition": {
+    "signal": "Charge_Cluster_Number == 1",
+    "background": "Charge_Cluster_Number > 1",
+    "positive_roc_label": 1
+  },
+  "counts": {
+    "train": 631945,
+    "validation": 68741,
+    "test": 260215
+  },
+  "class_counts": {
+    "train": {"signal": 160534, "background": 471411},
+    "validation": {"signal": 17782, "background": 50959},
+    "test": {"signal": 65954, "background": 194261}
+  },
+  "runs": {
+    "train": [8956, 8957, 8958, 8968, 8972, 8999, 9000, 9001, 9008, 9009],
+    "validation": [8969],
+    "test": [8967, 8970, 8971, 9010]
+  },
+  "overlap_counts": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "run_event_counts": {
+    "8956": 57768,
+    "8957": 58227,
+    "8958": 57728,
+    "8967": 68683,
+    "8968": 68672,
+    "8969": 68741,
+    "8970": 68428,
+    "8971": 68363,
+    "8972": 39999,
+    "8999": 89698,
+    "9000": 71642,
+    "9001": 71570,
+    "9008": 57991,
+    "9009": 58650,
+    "9010": 54741
+  }
+}

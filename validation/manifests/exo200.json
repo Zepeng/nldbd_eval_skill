@@ -1,8 +1,8 @@
 {
   "dataset": "exo200",
-  "benchmark_version": "1.1",
-  "generated_utc": "2026-10-23T04:11:00+00:00",
-  "data_root": "/home/klz/Data/zeronu_benchmark/EXO-200",
+  "benchmark_version": "1.2",
+  "generated_utc": "2026-11-25T19:09:33+00:00",
+  "data_root": "<NLDBD_DATA_ROOT>/EXO-200",
   "reader": "EXO200Reader",
   "label_convention": "1 = signal-like = evaluation-positive class",
   "signal_group": "signal",
@@ -11,71 +11,71 @@
   "protocol_sha256": "a46d4226b355c497ba410ec1258dfa3e13fbace114d18986a12dc027e5a7ee7c",
   "splits": {
     "train": {
-      "n": 336632,
+      "n": 631945,
       "label_counts": {
-        "0": 175829,
-        "1": 160803
+        "0": 471411,
+        "1": 160534
       },
       "group_counts": {
-        "background": 175829,
-        "signal": 160803
+        "background": 471411,
+        "signal": 160534
       },
-      "ids_sha256_sorted": "5dff7ff7cce7fbe779933e6aa97c97c84112f41adc37beb6527179c8a566eee1",
-      "ids_sha256_canonical_order": "8b3870b59856de931ea344482c6b1e768d653a7db54a5d77caadecc0d8d1b884",
-      "labels_sha256_canonical_order": "578f6c56dd7ef7ce34986e4971aefa31503d40aa3c720deeb78c4d8e49451d68",
+      "ids_sha256_sorted": "b0bd8a4145d40dc9eaf18ee241bef1b759f4cee7cf1021c05d0a4b2dbf9f0553",
+      "ids_sha256_canonical_order": "1b3c3c902040003186380da192c431dfbdff52dd1ccb9535816607075677e987",
+      "labels_sha256_canonical_order": "d1cd520149e2a0316bc40f05d7fad657c750adcc8c6e37908663af4b807fd98b",
       "energy_keV": {
-        "min": 492.05584716796875,
-        "max": 3897.439453125,
+        "min": 500.0,
+        "max": 3892.0,
         "n_nonfinite": 0,
         "n_below_0": 0,
-        "n_above_3000": 3269,
-        "sha256_repr": "473b3dfd7c2ff17da0c480007ac73bc376c5dbeff474f1650eb79c6e4fc8e5ca"
+        "n_above_3000": 8142,
+        "sha256_repr": "19ce93af9ab5c400b12855c35973359b10a3ce6cd94a176b8385602c1dde27ba"
       },
       "seconds_to_read": 0.9
     },
     "validation": {
-      "n": 37987,
+      "n": 68741,
       "label_counts": {
-        "0": 20174,
-        "1": 17813
+        "0": 50959,
+        "1": 17782
       },
       "group_counts": {
-        "background": 20174,
-        "signal": 17813
+        "background": 50959,
+        "signal": 17782
       },
-      "ids_sha256_sorted": "796f54f48baaec3a32c9c3c3fc93081b55c05c9f4b40714e6164453f1a05bc62",
-      "ids_sha256_canonical_order": "be26ef950e0ded5ccbfa8800e05887073b29ddfabe8acf5b958e4850e0ca13ad",
-      "labels_sha256_canonical_order": "39d73ad350471b5eaf5bc06af9fb4105748b09cead5e91d114261f975950d59b",
+      "ids_sha256_sorted": "680ff2157523e0d6d39db1a2e75cc5b88163defa1d561973c0bbbc6c9d7b6315",
+      "ids_sha256_canonical_order": "381c9cdf0b2df66f1d180fa7b133fba0a66f407f2010f0d8d4585ce16f9b46b5",
+      "labels_sha256_canonical_order": "7284d8b0c99a80689f53723ecce5b4ce218d592274d08b9a2cff4160d5671149",
       "energy_keV": {
-        "min": 493.5534362792969,
-        "max": 3843.857177734375,
+        "min": 500.0,
+        "max": 3680.0,
         "n_nonfinite": 0,
         "n_below_0": 0,
-        "n_above_3000": 362,
-        "sha256_repr": "cebdaa503d7804bf961a0116d5a1db35fad6e4c7f431d299224eb9fb3768b978"
+        "n_above_3000": 881,
+        "sha256_repr": "4603bf361b936d29a9fe474a09b4a1d3f1ddc47739e02c2f24b2492596234fda"
       },
       "seconds_to_read": 0.1
     },
     "test": {
-      "n": 140383,
+      "n": 260215,
       "label_counts": {
-        "0": 74321,
-        "1": 66062
+        "0": 194261,
+        "1": 65954
       },
       "group_counts": {
-        "background": 74321,
-        "signal": 66062
+        "background": 194261,
+        "signal": 65954
       },
-      "ids_sha256_sorted": "8f3a39391b6fd5ecea6f1306bb18b634271812e387af99e2c776ee6103cfdcde",
-      "ids_sha256_canonical_order": "3c0d21e997c1eb7cc5301b3783aa8daa834be46027314cca47ef41d80df78f89",
-      "labels_sha256_canonical_order": "0ae15a0bd618d6d186294853555d1fc6e38c37f6b972bed8af1d3b09724122b9",
+      "ids_sha256_sorted": "da6ebcd7c90a1a32b2208951e50fe8546f7e5a50b39a4d3181beca838dd2deb6",
+      "ids_sha256_canonical_order": "7a4dc8bf500ffb31b4da4c212308ac66f9e23c135395a7d45373dcfd384aa4ca",
+      "labels_sha256_canonical_order": "a88a7de6ed72943110ed9f287a324f6ab03ecd7ef3b6ce9f74f4f147422687ad",
       "energy_keV": {
-        "min": 491.6553955078125,
-        "max": 3870.45166015625,
+        "min": 500.0,
+        "max": 3830.0,
         "n_nonfinite": 0,
         "n_below_0": 0,
-        "n_above_3000": 1426,
-        "sha256_repr": "8a22178d9dcffc82dcc5e109be67e56c62351932841804a9e0814291a77333fc"
+        "n_above_3000": 3267,
+        "sha256_repr": "706897cc3174939020fadad5c7170316bdc8ec18683fe8083d03ee88fa4f7899"
       },
       "seconds_to_read": 0.3
     }
@@ -85,58 +85,58 @@
     "rule": "np.random.default_rng(seed).permutation(n_train)[:round(fraction*n_train)], positions into the canonical train order; subsets are nested",
     "fractions": {
       "0.01": {
-        "n": 3366,
-        "ids_sha256_sorted": "12c04039f344b62c510ff749afaf5020ee4a8e8586016780455b214afc1cfb8a",
+        "n": 6319,
+        "ids_sha256_sorted": "94581654689d894e9aa08d39bab4dc03d0962750117d8561ffae2df036e45715",
         "label_counts": {
-          "0": 1698,
-          "1": 1668
+          "0": 4671,
+          "1": 1648
         }
       },
       "0.1": {
-        "n": 33663,
-        "ids_sha256_sorted": "48cab52ab28dbd7dea0cb7b250d1b28df0cc5a08c19a176035faca17f53531df",
+        "n": 63194,
+        "ids_sha256_sorted": "2bc8ef65ea53f0df255f98d27e8e823e3f157e020d5b3d024c5e0b601e38e292",
         "label_counts": {
-          "0": 17595,
-          "1": 16068
+          "0": 47114,
+          "1": 16080
         }
       },
       "1.0": {
-        "n": 336632,
-        "ids_sha256_sorted": "5dff7ff7cce7fbe779933e6aa97c97c84112f41adc37beb6527179c8a566eee1",
+        "n": 631945,
+        "ids_sha256_sorted": "b0bd8a4145d40dc9eaf18ee241bef1b759f4cee7cf1021c05d0a4b2dbf9f0553",
         "label_counts": {
-          "0": 175829,
-          "1": 160803
+          "0": 471411,
+          "1": 160534
         }
       }
     }
   },
   "energy_only_floor_test": {
     "plus_energy": {
-      "inclusive_auc": 0.2792355806302845,
-      "matched_auc": 0.5000034405979845,
+      "inclusive_auc": 0.27839486588036716,
+      "matched_auc": 0.5000007560203369,
       "matching_status": "ok",
       "common_support_keV": [
-        538.1772625732422,
-        2662.5670739746092
+        530.0,
+        2664.0
       ],
-      "valid_bins": 426,
+      "valid_bins": 424,
       "coverage": [
-        0.9414028336540143,
-        0.9456571099875875
+        0.9274635670566918,
+        0.9611850683809928
       ]
     },
     "minus_energy": {
-      "inclusive_auc": 0.7207644193697156,
-      "matched_auc": 0.4999965594018809,
+      "inclusive_auc": 0.7216051341196329,
+      "matched_auc": 0.4999992439796656,
       "matching_status": "ok",
       "common_support_keV": [
-        538.1772625732422,
-        2662.5670739746092
+        530.0,
+        2664.0
       ],
-      "valid_bins": 426,
+      "valid_bins": 424,
       "coverage": [
-        0.9414028336540143,
-        0.9456571099875875
+        0.9274635670566918,
+        0.9611850683809928
       ]
     }
   },
@@ -144,7 +144,7 @@
     "split": "validation",
     "seed": 7,
     "fraction": 1.0,
-    "n": 37987,
+    "n": 68741,
     "rule": "np.random.default_rng(seed).permutation(n_validation)[:round(fraction*n_validation)], positions into the canonical validation order; smallest candidate fraction with an estimable matched AUC and per-class coverage >= 0.5 x the full validation split's coverage",
     "candidate_fractions": [
       0.005,
@@ -160,7 +160,7 @@
     "minimum_fraction_for_this_dataset": 0.0,
     "candidates": {
       "0.005": {
-        "n": 190,
+        "n": 344,
         "matching_status": "not_estimable_no_eligible_bins",
         "valid_bins": 0,
         "coverage": [
@@ -173,7 +173,7 @@
         ]
       },
       "0.01": {
-        "n": 380,
+        "n": 687,
         "matching_status": "not_estimable_no_eligible_bins",
         "valid_bins": 0,
         "coverage": [
@@ -186,7 +186,7 @@
         ]
       },
       "0.02": {
-        "n": 760,
+        "n": 1375,
         "matching_status": "not_estimable_no_eligible_bins",
         "valid_bins": 0,
         "coverage": [
@@ -199,7 +199,7 @@
         ]
       },
       "0.05": {
-        "n": 1899,
+        "n": 3437,
         "matching_status": "not_estimable_no_eligible_bins",
         "valid_bins": 0,
         "coverage": [
@@ -212,51 +212,51 @@
         ]
       },
       "0.1": {
-        "n": 3799,
+        "n": 6874,
         "matching_status": "not_estimable_low_coverage",
-        "valid_bins": 1,
+        "valid_bins": 8,
         "coverage": [
-          0.01568032372281234,
-          0.011525795828759604
+          0.04284875758168656,
+          0.15655133295519003
         ],
         "coverage_ratio_to_full_validation": [
-          0.023524566876181763,
-          0.014950047411177081
+          0.06544372359074377,
+          0.19589021199135803
         ]
       },
       "0.25": {
-        "n": 9497,
+        "n": 17185,
         "matching_status": "not_estimable_low_coverage",
-        "valid_bins": 26,
+        "valid_bins": 59,
         "coverage": [
-          0.2082912032355915,
-          0.25153778558875217
+          0.2932159421429133,
+          0.5185931899641577
         ],
         "coverage_ratio_to_full_validation": [
-          0.3124910191176339,
-          0.32626830078587654
+          0.44783429329119495,
+          0.6489074733616671
         ]
       },
       "0.5": {
-        "n": 18994,
+        "n": 34370,
         "matching_status": "not_estimable_low_coverage",
-        "valid_bins": 87,
+        "valid_bins": 93,
         "coverage": [
-          0.46379706381703784,
-          0.5817837657276472
+          0.4608012568735271,
+          0.6335578002244668
         ],
         "coverage_ratio_to_full_validation": [
-          0.6958163133371696,
-          0.7546285748857919
+          0.7037905364609042,
+          0.7927608756309527
         ]
       },
       "1.0": {
-        "n": 37987,
+        "n": 68741,
         "matching_status": "ok",
-        "valid_bins": 202,
+        "valid_bins": 210,
         "coverage": [
-          0.6665510062456628,
-          0.7709537977881322
+          0.6547420475284051,
+          0.7991789450005624
         ],
         "coverage_ratio_to_full_validation": [
           1.0,
@@ -265,51 +265,51 @@
       }
     },
     "full_validation_floor": {
-      "inclusive_auc": 0.28169035521318764,
-      "matched_auc": 0.4999861272472022,
+      "inclusive_auc": 0.27635536232185126,
+      "matched_auc": 0.49997710879109836,
       "matching_status": "ok",
       "common_support_keV": [
-        537.7820190429687,
-        2661.836414794922
+        531.5,
+        2662.0
       ],
-      "valid_bins": 202,
+      "valid_bins": 210,
       "coverage": [
-        0.6665510062456628,
-        0.7709537977881322
+        0.6547420475284051,
+        0.7991789450005624
       ]
     },
     "label_counts": {
-      "0": 20174,
-      "1": 17813
+      "0": 50959,
+      "1": 17782
     },
-    "ids_sha256_sorted": "796f54f48baaec3a32c9c3c3fc93081b55c05c9f4b40714e6164453f1a05bc62",
+    "ids_sha256_sorted": "680ff2157523e0d6d39db1a2e75cc5b88163defa1d561973c0bbbc6c9d7b6315",
     "energy_only_floor": {
       "plus_energy": {
-        "inclusive_auc": 0.28169035521318764,
-        "matched_auc": 0.4999861272472022,
+        "inclusive_auc": 0.27635536232185126,
+        "matched_auc": 0.49997710879109836,
         "matching_status": "ok",
         "common_support_keV": [
-          537.7820190429687,
-          2661.836414794922
+          531.5,
+          2662.0
         ],
-        "valid_bins": 202,
+        "valid_bins": 210,
         "coverage": [
-          0.6665510062456628,
-          0.7709537977881322
+          0.6547420475284051,
+          0.7991789450005624
         ]
       },
       "minus_energy": {
-        "inclusive_auc": 0.7183096447868124,
-        "matched_auc": 0.5000138727527353,
+        "inclusive_auc": 0.7236446376781488,
+        "matched_auc": 0.5000228912089014,
         "matching_status": "ok",
         "common_support_keV": [
-          537.7820190429687,
-          2661.836414794922
+          531.5,
+          2662.0
         ],
-        "valid_bins": 202,
+        "valid_bins": 210,
         "coverage": [
-          0.6665510062456628,
-          0.7709537977881322
+          0.6547420475284051,
+          0.7991789450005624
         ]
       }
     }

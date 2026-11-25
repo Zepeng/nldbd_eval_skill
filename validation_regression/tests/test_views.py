@@ -33,7 +33,7 @@ def main():
             ok &= check(BENCHMARK["datasets"]["mjd"]["detectors"][aux["detector"][0]] == det_id, "mjd detector index maps to the stored id")
         else:
             with h5py.File(cls.files[t["file_index"][pos]], "r") as f:
-                raw = np.asarray(f["Waveforms"][str(t["row"][pos])][()], dtype=np.float32)
+                raw = np.asarray(f["Waveforms"][int(t["row"][pos])], dtype=np.float32)
             raw = raw - raw[:, :200].mean(axis=1, keepdims=True)
             ok &= check(np.allclose(x2[0] * np.exp(aux["log_scale"][0]), raw, rtol=1e-4, atol=1e-2), "exo200 scale is lossless")
     cls, reg = get_reader("supernemo"), get_view("supernemo")

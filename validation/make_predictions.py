@@ -7,7 +7,7 @@ The model is a Python module (file path or import name) exposing two functions:
     score(model, inputs) -> np.ndarray              # one float per event, higher = signal-like
 
 ``inputs`` is exactly what ``Reader.iter_inputs`` yields for the dataset (see readers/*.py):
-MJD float32 [B, 1, 3800]; EXO-200 float32 [B, 226, 300]; NEXT list of float32 (n_hits, 4)
+MJD float32 [B, 1, 3800]; EXO-200 float32 [B, 226, 600]; NEXT list of float32 (n_hits, 4)
 [x, y, z, hit energy MeV]; SuperNEMO list of float32 (n_hits, 4) [tX, tY, tZ, tR].
 No labels, energies or categories ever reach the model.
 

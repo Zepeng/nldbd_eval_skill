@@ -31,7 +31,7 @@ class WaveformCNN(nn.Module):  # MJD: [B, 1, 3800]
         return self.net(x).squeeze(1)
 
 
-class SensorCNN(nn.Module):  # EXO-200: [B, 226, 300] -> treat as one image
+class SensorCNN(nn.Module):  # EXO-200: [B, 226, 600] -> treat as one image
     def __init__(self, width=16):
         super().__init__()
         self.net = nn.Sequential(

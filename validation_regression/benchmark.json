@@ -127,8 +127,8 @@
       "min_window_keV": 6.0
     },
     "exo200": {
-      "target": "Rotated_energy (charge + scintillation, keV)",
-      "inputs": "classification view (226 x 300 waveforms, baseline-subtracted, max-normalised) + log(scale)",
+      "target": "Rotated_Energy (charge + scintillation, keV)",
+      "inputs": "classification view (226 x 600 waveforms, baseline-subtracted, max-normalised) + log(scale)",
       "peak_model": "gauss_tail_step",
       "lines": [
         {
