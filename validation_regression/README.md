@@ -4,6 +4,9 @@ A separate benchmark beside the frozen classification packet `validation/` (nldb
 the classification readers, splits and labeled subsets **read-only** and never modifies them. One foundation model
 (the same `fm_contract.md` module) serves both tasks.
 
+> **EXO-200 numbers in this file were produced on open-data release v1** (300-sample waveforms, no blacklist). The classification reader now implements release v3
+> (`validation_skill.md` card 6.2), which this extension reads through the same reader; the EXO-200 references and baselines below must be regenerated before they are used.
+
 ## Task
 Predict each event's energy from the detector inputs. Score the **physics resolution** of the predicted spectrum on
 the frozen test split, not MSE.

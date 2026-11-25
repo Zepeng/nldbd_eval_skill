@@ -3,7 +3,7 @@ name: nldbd-energy-matched-auc-validation
 description: Reproducible evaluation of any neutrinoless-double-beta-decay (NLDBD) event classifier or foundation model on the benchmark datasets MJD, EXO-200, NEXT and SuperNEMO with the paper's frozen energy-matched AUC (EnergyBench strict600), frozen official splits, three label regimes (1 %, 10 %, 100 %), a coarse mode (frozen validation subset, for development) and a full mode (complete test split, the benchmark), a frozen fine-tuning protocol (linear probe, full fine-tune, scratch control) that turns any pretrained encoder into benchmark rows, integrity gates that make a result benchmark-valid, and a registry for adding datasets and metrics. Use it whenever a model trained on these datasets has to be scored, fine-tuned, compared with the paper "Learning Physics, Not Energy", reported, or when the benchmark has to be extended.
 ---
 
-# NLDBD validation skill, protocol 1.2
+# NLDBD validation skill, protocol 1.3
 
 This file is the complete protocol. An LLM or a person following it from top to bottom, with the
 harness folder beside it, reproduces the evaluation exactly. "Harness" means the `validation/`
@@ -166,7 +166,7 @@ coverage per class, effective sample sizes).
    cd <folder containing this file>
    bash validation/setup_env.sh [--with-torch]      # optional: creates ./.venv (numpy, h5py)
    export PY=.venv/bin/python                       # or any python >= 3.11 with numpy + h5py
-   export NLDBD_DATA_ROOT=/path/to/zeronu_benchmark # contains MJD/ EXO-200/ NEXT/ SuperNEMO/
+   export NLDBD_DATA_ROOT=/path/to/zeronu_benchmark # contains MJD/ EXO-200/ (release v3) NEXT/ SuperNEMO/
    bash validation/selfcheck.sh $PY mjd exo200 supernemo next   # must end with SELFCHECK PASS
    ```
 
@@ -293,19 +293,26 @@ reproduces. Row counts come from the frozen manifests.
 | Model input | float32 `[B, 1, 3800]`: raw waveform minus mean of first 200 samples, divided by max abs |
 | Forbidden as input | `energy_label`, PSD flags, `id`, `run_number`, `detector`, `tp0` |
 
-### 6.2 EXO-200, `readers/exo200.py`
+### 6.2 EXO-200, `readers/exo200.py` (open-data release v3)
+
+The benchmark reads the EXO-200 open-data release v3: 600-sample waveforms (release v1 stored 300 samples, which cut signals off) and an event
+blacklist. The reader stops with an explanation if the data folder holds anything else, for example the v1 shards. Results obtained on release v1 (the
+EXO-200 columns of the baseline and cost tables in sections 7.3 and 9, the paper's EXO-200 number and `validation_regression`) are not comparable and are
+marked as such where they appear.
 
 | | |
 |---|---|
-| Files | 29 `<run>-<part>.h5` shards; `Waveforms/<i>` is a (226, 300) int16 array |
-| Signal-like (label 1) | `Charge_cluster_number == 1` (the stored exobench label has the opposite orientation; flipped) |
-| Energy | `Rotated_energy` keV |
-| Split | run-grouped, seed 42 (`manifests/external/exo200_v1_split.json`): train runs 8956 8957 8958 8968 8972 8999 9000 9001 9008 9009 (336,632), validation 8969 (37,987), test 8967 8970 8971 9010 (140,383) |
-| Regimes | 1 % = 3,366, 10 % = 33,663, 100 % = 336,632 |
-| Coarse | 100 % of validation = 37,987 events (202 valid bins; no smaller fraction keeps >= 20 events per class per bin) |
-| `event_id` | `EXO200::8967-000.h5::4` |
-| Model input | float32 `[B, 226, 300]`: per-channel baseline (first 200 samples) subtracted, event divided by its max abs; channel blocks U+ 0:38, V+ 38:76, U− 76:114, V− 114:152, APD+ 152:189, APD− 189:226 |
-| Forbidden as input | `Rotated_energy`, `Total_*_Energy`, `Charge_cluster_number`, `Charge_Clusters_Pos` (its shape encodes the label), `event_number` |
+| Files | 15 `<run>.h5` (one per run); `Waveforms` is one (N, 226, 600) int16 array; `Event_Number` unique within a run. 960,901 usable events (976,344 in the files, 15,443 blacklisted) |
+| Blacklist | `manifests/external/exo200_event_blacklist.csv` (the data owner's `event_blacklist_v1.csv`, byte-identical; key `(run, event_number)`): events with incorrect labels, removed from **every** split before counts, ids, labels or energies are formed. The reader refuses data whose own copy differs, or a blacklist row that is not in the file |
+| Signal-like (label 1) | `Charge_Cluster_Number == 1`; background: more clusters |
+| Energy | `Rotated_Energy` keV (float16 in the file, so 2 keV resolution above 2,048 keV), read as float64 |
+| Split | run-grouped (`manifests/external/exo200_split.json`, built by `validation/make_exo200_split.py`; the runs are the data owner's seed-42 selection, unchanged from the earlier release): train runs 8956 8957 8958 8968 8972 8999 9000 9001 9008 9009 (631,945), validation 8969 (68,741), test 8967 8970 8971 9010 (260,215) |
+| Class balance | train 160,534 signal / 471,411 background (25 % signal; the earlier release had 48 % with 175,829 background events in train and nearly the same signal count), validation 17,782 / 50,959, test 65,954 / 194,261 |
+| Regimes | 1 % = 6,319, 10 % = 63,194, 100 % = 631,945 labeled events |
+| Coarse | 100 % of validation = 68,741 events (210 valid bins; no smaller fraction is estimable). The coarse cache holds the raw int16 waveforms, about 19 GB |
+| `event_id` | `EXO200::8967.h5::4` (file name, stored `Event_Number`) |
+| Model input | float32 `[B, 226, 600]`: per-channel baseline (first 200 samples) subtracted, event divided by its max abs; channel blocks U+ 0:38, V+ 38:76, U- 76:114, V- 114:152, APD+ 152:189, APD- 189:226 |
+| Forbidden as input | `Rotated_Energy`, `Total_*_Energy`, `Charge_Cluster_Number`, `Charge_Cluster_Energy`, `Charge_Cluster_Position` (their content encodes the label), `Event_Number`, the run number |
 
 ### 6.3 NEXT, `readers/next.py`
 
@@ -377,6 +384,8 @@ model's separation is energy (compare with `matched_auc`); energy alone scores 0
 EXO-200, SuperNEMO and NEXT it is a diagnostic only, not a secondary metric.
 
 ### 7.3 Official baseline: Region + MLP Transformer re-run under this protocol (2026-10-25)
+
+> **EXO-200 column and rows: release v1.** They were produced before EXO-200 moved to release v3 (card 6.2) and are not comparable with v3 runs; they must be regenerated.
 
 **Every model is compared with this table.** Do not compare with the paper's numbers (other energy profiles,
 full labels only) or with a physics reconstruction. The table shows the paper's Region + MLP Transformer, trained
@@ -494,7 +503,12 @@ dataset's semantics or the primary metric is a new version; results from differe
 never mixed in one table (the report records the version per run). Changes that leave all frozen
 artefacts byte-identical (new secondary metric, new dataset, documentation) are minor versions.
 
+Change in **1.3** (artefact version 1.1 to 1.2): EXO-200 moves to open-data release v3 (card 6.2); its manifest, ids and split definition are
+new, the other manifests only carry the new artefact version number.
+
 ## 9. Costs and the coarse-versus-full agreement (tiny models, lab workstation, RTX 5090)
+
+> The EXO-200 rows of this section (counts, times, agreement) were measured on release v1; with release v3 the validation and test splits are 68,741 and 260,215 events.
 
 Scoring time is reading inputs plus model inference, then the evaluator (NumPy; up to ~7 s for
 390,000 events, it runs the metric twice for the label-shuffle null, plus a few seconds of id-set
@@ -598,12 +612,13 @@ validation/
   energybench/                      frozen paper evaluator (metrics.py, evaluate.py, configs/, tests/, SHA256SUMS, PROVENANCE.md)
   metrics/__init__.py               metric registry (matched_auc primary, inclusive_auc secondary)
   readers/{common,mjd,exo200,next,supernemo}.py   dataset readers (contract in common.py; registry via benchmark.json)
-  manifests/<ds>.json, <ds>_ids.npz frozen splits, regimes, coarse subsets, floors; external/ = the owners' split definitions
+  manifests/<ds>.json, <ds>_ids.npz frozen splits, regimes, coarse subsets, floors; external/ = the owners' split definitions (EXO-200: split, blacklist)
   finetune_recipe.json              THE frozen fine-tuning recipe (section 5b)
   fm_contract.md                    the foundation-model interface (EMBED_DIM, to_tensors, load_encoder)
   finetune.py                       fine-tunes an encoder (probe / full / scratch) and evaluates it in both modes
   freeze_splits.py                  creates a manifest (new dataset or new version only)
   build_next_combined.py            one-time consolidation of the NEXT release
+  make_exo200_split.py              rebuilds manifests/external/exo200_split.json from the EXO-200 files and the blacklist (--check verifies)
   make_predictions.py               model module -> predictions.npz (test split, or coarse subset via the cache)
   coarse_cache.py                   one-time local cache of coarse-subset inputs
   evaluate_predictions.py           predictions + training ids -> metrics.json with gates (both modes)

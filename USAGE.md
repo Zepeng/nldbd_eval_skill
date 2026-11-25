@@ -34,7 +34,7 @@ export PY=.venv/bin/python
 #   NERSC:       export PY=/global/cfs/cdirs/gen0032/envs/fm/bin/python   (no torch)
 
 # workstation
-export NLDBD_DATA_ROOT=/home/klz/Data/zeronu_benchmark   # folder that contains MJD/ EXO-200/ NEXT/ SuperNEMO/
+export NLDBD_DATA_ROOT=/home/klz/Data/zeronu_benchmark   # folder that contains MJD/ EXO-200/ NEXT/ SuperNEMO/ (EXO-200: open-data release v3, 15 files <run>.h5)
 export NLDBD_NEXT_COMBINED=/home/klz/Data/NEXT_combined/next_combined.h5   # optional, makes NEXT fast
 # NERSC (same layout, read-only)
 export NLDBD_DATA_ROOT=/global/cfs/cdirs/gen0032/data/zeronu_benchmark
@@ -69,7 +69,7 @@ def score(model, inputs) -> np.ndarray:
 ```
 
 `inputs` is exactly what the reader yields (see `validation_skill.md` section 6, "Model input"):
-MJD float32 `[B, 1, 3800]`, EXO-200 float32 `[B, 226, 300]`, NEXT and SuperNEMO a list of float32
+MJD float32 `[B, 1, 3800]`, EXO-200 float32 `[B, 226, 600]`, NEXT and SuperNEMO a list of float32
 `(n_hits, 4)` arrays. `examples/tiny_models.py` is a complete example for all four.
 
 ## 5. Train (your work, with three rules)

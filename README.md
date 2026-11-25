@@ -1,6 +1,6 @@
 # NLDBD foundation-model project: validation harness
 
-Start with **[USAGE.md](USAGE.md)** (step-by-step instruction) and **[validation_skill.md](validation_skill.md)** (the protocol, version 1.2). It is the complete, reusable evaluation
+Start with **[USAGE.md](USAGE.md)** (step-by-step instruction) and **[validation_skill.md](validation_skill.md)** (the protocol, version 1.3). It is the complete, reusable evaluation
 protocol (energy-matched AUC, strict600 profile, frozen splits, coarse and full modes, integrity
 gates) and tells any LLM or person how to score a model and report it.
 
