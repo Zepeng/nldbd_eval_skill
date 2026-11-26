@@ -16,11 +16,15 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from validation.readers import get_reader  # noqa: E402
 
-PAPER_FILE = {"mjd": "events/MJD__region_mlp.npz", "exo200": "events/EXO-200__region_mlp.npz",
-              "next": "events/NEXT__gine.npz", "supernemo": "events/SuperNEMO__gine.npz"}
+PAPER_FILE = {"mjd": "events/MJD__region_mlp.npz", "next": "events/NEXT__gine.npz", "supernemo": "events/SuperNEMO__gine.npz"}
+# The paper's EXO-200 predictions were made on open-data release v1 (300-sample windows, no blacklist), a different population from the
+# release v3 that the exo200 reader implements, so there is nothing to match exactly; it is deliberately not listed here.
 
 
 def main(dataset: str, event_data: str | None = None):
+    if dataset not in PAPER_FILE:
+        print(f"SKIP {dataset}: no paper reference file for this reader (exo200: the paper used release v1, the reader implements release v3)")
+        return True
     event_data = Path(event_data or os.environ.get("NLDBD_PAPER_EVENT_DATA",
                       "/home/wenyu/iclr final paper/EnergyBench_reproducibility_20260923/event_data"))
     paper = np.load(event_data / PAPER_FILE[dataset], allow_pickle=False)

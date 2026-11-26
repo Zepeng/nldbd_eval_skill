@@ -6,7 +6,7 @@ The classification view is unchanged: each event yields exactly the inputs the c
   subtraction; 0 for SuperNEMO, whose hit inputs are not normalised), so that view + scale is lossless;
 * ``detector``: the MJD detector index (position in benchmark.json["datasets"]["mjd"]["detectors"]; 0 elsewhere).
 The regression target is the reference reconstructed energy ``energy_keV`` of the table (MJD ``energy_label``,
-EXO-200 ``Rotated_energy``, SuperNEMO ``E1 + E2``); no energy field is ever an input.
+EXO-200 ``Rotated_Energy``, SuperNEMO ``E1 + E2``); no energy field is ever an input.
 
 SuperNEMO regression uses its own table (manifest blocks, same 80/10/10 split as classification): train and validation
 contain 0nubb only (user 2026-10-25), test contains 0nubb (the headline peak), 2nubb and Bi214 (diagnostics). 0nubb never

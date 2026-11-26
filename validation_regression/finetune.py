@@ -53,7 +53,7 @@ def scale_header(x, log_scale):
 def rawify(x, factor):
     """Undo the amplitude normalisation of the encoder input (research option --raw-input): multiply the waveform
     payload by factor = exp(log_scale - ref) (ref = median labeled log_scale, so values stay O(1)). Works on the
-    reader layout ([B, 1, 3800] / [B, 226, 300]) and on the SIDERIUS event buffer ([B, 67808], 8 header slots)."""
+    reader layout ([B, 1, 3800] / [B, 226, 600]) and on the SIDERIUS event buffer ([B, 67808], 8 header slots)."""
     t = x[0]
     if t.dim() == 2 and t.shape[1] == 67808:
         t = torch.cat([t[:, :8], t[:, 8:] * factor[:, None]], 1)

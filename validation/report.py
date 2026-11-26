@@ -19,9 +19,10 @@ from validation.readers.common import BENCHMARK, DATASETS  # noqa: E402
 
 PRETTY = {name: spec["title"] for name, spec in BENCHMARK["datasets"].items()}
 PRIMARY = BENCHMARK["primary_metric"]
-# Table 1 of the paper, Region + MLP, energy-matched AUC. MJD/EXO-200 are strict600 values;
+# Table 1 of the paper, Region + MLP, energy-matched AUC. MJD is a strict600 value;
 # NEXT/SuperNEMO were reported under their own profiles (see validation_skill.md, section 6).
-PAPER_REGION_MLP = {"mjd": 0.973, "exo200": 0.970, "next": 0.988, "supernemo": 0.591}
+# The paper's EXO-200 value (0.970) was obtained on open-data release v1, not the release the exo200 reader implements, so it is not listed.
+PAPER_REGION_MLP = {"mjd": 0.973, "next": 0.988, "supernemo": 0.591}
 
 
 def collect(runs: Path, mode="full", metric=None):
@@ -80,7 +81,7 @@ def main(runs: Path, output: Path, metric=None):
         cells = [fmt([r["matched_auc"] for r in valid if r["model"] == model and r["label_fraction"] == frac and r["dataset"] == d]) for d in DATASETS]
         lines.append(f"| {model} | {frac:g} | " + " | ".join(cells) + " |")
     if metric == PRIMARY:
-        lines.append("| *paper Region + MLP (Table 1, full labels)* | 1 | " + " | ".join(f"{PAPER_REGION_MLP.get(d, float('nan')):.3f}" for d in DATASETS) + " |")
+        lines.append("| *paper Region + MLP (Table 1, full labels)* | 1 | " + " | ".join(f"{PAPER_REGION_MLP[d]:.3f}" if d in PAPER_REGION_MLP else "n/a" for d in DATASETS) + " |")
     if coarse:
         lines += [""] + table(coarse, "## Coarse evaluation (frozen validation subset; development numbers, NOT the benchmark)",
                               "Same metric and gates on a seeded fraction of the validation split; use it to compare candidates quickly.")

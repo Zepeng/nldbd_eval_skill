@@ -3,7 +3,7 @@
 Used for the labeled-regime inputs of the fine-tuning protocol (one file per dataset x label
 fraction) so every fine-tune of every candidate reads them from fast local/scratch storage instead
 of the raw data. Keyed by the SHA-256 of the sorted event ids; the harness never ships a cache.
-Formats as in coarse_cache: mjd float32 [n,1,3800]; exo200 int16 [n,226,300] raw (preprocessed on
+Formats as in coarse_cache: mjd float32 [n,1,3800]; exo200 int16 [n,226,600] raw (preprocessed on
 load); next/supernemo ragged hits float32 [total,4] + offsets.
 """
 from __future__ import annotations
@@ -45,16 +45,14 @@ def build(dataset: str, name: str, reader, split: str, table, positions, batch_s
             for pos, x in reader.iter_inputs(split, batch_size=batch_size, indices=positions, table=table):
                 idx = np.array([where[int(q)] for q in pos]); o = np.argsort(idx); ds[idx[o]] = x[o]
         elif dataset == "exo200":
-            ds = f.create_dataset("inputs_int16", shape=(len(positions), 226, 300), dtype=np.int16, chunks=(16, 226, 300))
+            ds = f.create_dataset("inputs_int16", shape=(len(positions), 226, 600), dtype=np.int16, chunks=(16, 226, 600))
             order = np.lexsort((table["row"][positions], table["file_index"][positions])); ps = positions[order]
             for k in np.unique(table["file_index"][ps]):
                 here = ps[table["file_index"][ps] == k]
-                with h5py.File(reader.files[k], "r") as g:
-                    wf = g["Waveforms"]
-                    for s in range(0, len(here), batch_size):
-                        chunk = here[s:s + batch_size]
-                        raw = np.stack([wf[str(int(r))][()] for r in table["row"][chunk]]).astype(np.int16)
-                        idx = np.array([where[int(q)] for q in chunk]); o = np.argsort(idx); ds[idx[o]] = raw[o]
+                for s in range(0, len(here), batch_size):
+                    chunk = here[s:s + batch_size]
+                    raw = reader.read_raw(int(k), table["row"][chunk]).astype(np.int16)
+                    idx = np.array([where[int(q)] for q in chunk]); o = np.argsort(idx); ds[idx[o]] = raw[o]
         else:
             per_event = [None] * len(positions)
             for pos, batch in reader.iter_inputs(split, batch_size=batch_size, indices=positions, table=table):
